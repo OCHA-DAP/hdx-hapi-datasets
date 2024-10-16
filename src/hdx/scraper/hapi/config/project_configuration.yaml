@@ -1,0 +1,30 @@
+default_db_uri: "postgresql+psycopg://postgres:postgres@localhost:5432/hapirestore"
+
+dataset:
+  title: "Curated data for"
+  name: "hdx-hapi-"
+
+countries:
+  - LBN
+
+subcategories:
+  funding:
+    tags:
+      - funding
+    resource:
+      name: "Funding for"
+      description: "Curated Funding Data with HXL hashtags"
+      filename: "hapi_funding_"
+    view: "funding"
+    hxltags:
+      location_code: "#country+code"
+      has_hrp: "#meta+has_hrp"
+      in_gho: "#meta+in_gho"
+      appeal_code: "#activity+appeal+id+external"
+      appeal_name: "#activity+appeal+name"
+      appeal_type: "#activity+appeal+type+name"
+      requirements_usd: "#value+funding+required+usd"
+      funding_usd: "#value+funding+total+usd"
+      funding_pct: "#value+funding+pct"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"

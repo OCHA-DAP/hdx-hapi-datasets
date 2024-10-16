@@ -1,0 +1,6 @@
+notes: "This dataset contains standardised data obtained from the [HAPI API](https://hapi.humdata.org/)"
+license_id: "cc-by-igo"
+methodology: "Registry"
+dataset_source: "Humanitarian partners"
+caveats: ""
+private: False  # has to be True or False

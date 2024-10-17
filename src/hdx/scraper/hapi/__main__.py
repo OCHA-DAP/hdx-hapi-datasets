@@ -8,7 +8,7 @@ from typing import Optional
 
 from _version import __version__
 from hapi_schema.views import prepare_hapi_views
-from view_reader import ViewReader
+from subcategory_reader import SubcategoryReader
 
 from hdx.api.configuration import Configuration
 from hdx.database import Database
@@ -139,21 +139,24 @@ def main(
                         country_dataset = CountryDataset(
                             folder, configuration, countryiso3
                         )
-                        view_reader = ViewReader(
+                        subcategory_reader = SubcategoryReader(
                             configuration,
                             database,
                             country_dataset,
                             today,
                             errors_on_exit,
                         )
-                        for subcategory in subcategories:
-                            view_reader.view_by_location(subcategory, countryiso3)
+                        for _, subcategory_info in subcategories.items():
+                            subcategory_reader.view_by_location(
+                                subcategory_info, countryiso3
+                            )
 
                         dataset = country_dataset.get_dataset()
                         if dataset:
                             dataset.update_from_yaml(
                                 script_dir_plus_file(
-                                    join("config", "hdx_dataset_static.yaml"), main
+                                    join("config", "hdx_dataset_static.yaml"),
+                                    main,
                                 )
                             )
                             dataset.create_in_hdx(

@@ -1,5 +1,6 @@
+import logging
 from datetime import datetime
-from typing import Optional
+from typing import Dict, Optional
 
 from sqlalchemy import select
 
@@ -11,8 +12,10 @@ from hdx.utilities.dateparse import (
 )
 from hdx.utilities.errors_onexit import ErrorsOnExit
 
+logger = logging.getLogger(__name__)
 
-class ViewReader:
+
+class SubcategoryReader:
     def __init__(
         self,
         configuration: Configuration,
@@ -28,14 +31,26 @@ class ViewReader:
         self.today = today
         self.errors_on_exit = errors_on_exit
 
-    def view_by_location(self, view_name: str, countryiso3: str) -> bool:
-        view_info = self.configuration[view_name]
-        view = self.views[view_info["view"]]
-        results = self.session.execute(
-            select(view).where(view.c.location_code == countryiso3)
-        )
+    def view_by_location(
+        self, subcategory_info: Dict, countryiso3: str
+    ) -> bool:
+        view_name = subcategory_info["view"]
+        logger.info(f"Processing subcategory {view_name}")
+        view = self.views[subcategory_info["view"]]
         headers_to_index = {col.name: i for i, col in enumerate(view.c)}
-        hxltags = view_info["hxltags"]
+        if "origin_location_code" in headers_to_index:
+            results = self.session.execute(
+                select(view).where(
+                    view.c.origin_location_code == countryiso3
+                    or view.c.asylum_location_code == countryiso3
+                )
+            )
+        else:
+            results = self.session.execute(
+                select(view).where(view.c.location_code == countryiso3)
+            )
+
+        hxltags = subcategory_info["hxltags"]
         rows = []
         for result in results:
             row = {}
@@ -51,6 +66,6 @@ class ViewReader:
             rows.append(row)
         if len(rows) == 0:
             return False
-        self.country_dataset.add_tags(view_info["tags"])
-        resource_info = view_info["resource"]
+        self.country_dataset.add_tags(subcategory_info["tags"])
+        resource_info = subcategory_info["resource"]
         return self.country_dataset.add_resource(resource_info, hxltags, rows)

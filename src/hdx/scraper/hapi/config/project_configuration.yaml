@@ -5,17 +5,17 @@ dataset:
   name: "hdx-hapi-"
 
 countries:
-  - LBN
+  - "LBN"
 
 subcategories:
   funding:
-    tags:
-      - funding
-    resource:
-      name: "Funding for"
-      description: "Curated Funding Data with HXL hashtags"
-      filename: "hapi_funding_"
     view: "funding"
+    tags:
+      - "funding"
+    resource:
+      name: "Funding Data for"
+      description: "Curated Funding Data with HXL hashtags"
+      filename: "hapi_funding"
     hxltags:
       location_code: "#country+code"
       has_hrp: "#meta+has_hrp"
@@ -26,5 +26,210 @@ subcategories:
       requirements_usd: "#value+funding+required+usd"
       funding_usd: "#value+funding+total+usd"
       funding_pct: "#value+funding+pct"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
+  operational_presence:
+    view: "operational_presence"
+    tags:
+      - "operational presence"
+      - "who is doing what and where-3w-4w-5w"
+    resource:
+      name: "Operational Presence Data for"
+      description: "Curated Operational Presence Data with HXL hashtags"
+      filename: "hapi_operational_presence"
+    hxltags:
+      location_code: "#country+code"
+      has_hrp: "#meta+has_hrp"
+      in_gho: "#meta+in_gho"
+      provider_admin1_name: "#adm1+name+provider"
+      provider_admin2_name: "#adm2+name+provider"
+      admin1_code: "#adm1+code"
+      admin1_name: "#adm1+name"
+      admin2_code: "#adm2+code"
+      admin2_name: "#adm2+name"
+      org_acronym: "#org+acronym"
+      org_name: "#org+name"
+      org_type_description: "#org+type"
+      sector_code: "#sector+cluster+code"
+      sector_name: "#sector+cluster+name"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
+  food_price:
+    view: "food_price"
+    tags:
+      - "economics"
+      - "markets"
+      - "food security"
+    resource:
+      name: "Food Price Data for"
+      description: "Curated Food Price Data with HXL hashtags"
+      filename: "hapi_food_price"
+    hxltags:
+      location_code: "#country+code"
+      has_hrp: "#meta+has_hrp"
+      in_gho: "#meta+in_gho"
+      provider_admin1_name: "#adm1+name+provider"
+      provider_admin2_name: "#adm2+name+provider"
+      admin1_code: "#adm1+code"
+      admin1_name: "#adm1+name"
+      admin2_code: "#adm2+code"
+      admin2_name: "#adm2+name"
+      market_name: "#loc+market+name"
+      lat: "#geo+lat"
+      lon: "#geo+lon"
+      commodity_category: "#item+type"
+      commodity_name: "#item+name"
+      unit: "#item+unit"
+      price_flag: "#item+price+flag"
+      price_type: "#item+price+type"
+      currency_code: "#currency"
+      price: "#value"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
+  food_security:
+    view: "food_security"
+    tags:
+      - "food security"
+    resource:
+      name: "Food Security Data for"
+      description: "Curated Food Security Data with HXL hashtags"
+      filename: "hapi_food_security"
+    hxltags:
+      location_code: "#country+code"
+      has_hrp: "#meta+has_hrp"
+      in_gho: "#meta+in_gho"
+      provider_admin1_name: "#adm1+name+provider"
+      provider_admin2_name: "#adm2+name+provider"
+      admin1_code: "#adm1+code"
+      admin1_name: "#adm1+name"
+      admin2_code: "#adm2+code"
+      admin2_name: "#adm2+name"
+      ipc_phase: "#severity+v_ipc"
+      ipc_type: "#period+v_ipc"
+      population_in_phase: "#affected+num"
+      population_fraction_in_phase: "#affected+pct"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
+  conflict_event:
+    view: "conflict_event"
+    tags:
+      - "conflict-violence"
+    resource:
+      name: "Conflict Event Data for"
+      description: "Curated Conflict Event Data with HXL hashtags"
+      filename: "hapi_conflict_event"
+    hxltags:
+      location_code: "#country+code"
+      has_hrp: "#meta+has_hrp"
+      in_gho: "#meta+in_gho"
+      provider_admin1_name: "#adm1+name+provider"
+      provider_admin2_name: "#adm2+name+provider"
+      admin1_code: "#adm1+code"
+      admin1_name: "#adm1+name"
+      admin2_code: "#adm2+code"
+      admin2_name: "#adm2+name"
+      event_type: "#event+type"
+      events: "#indicator+event+num"
+      fatalities: "#affected+killed"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
+  idps:
+    view: "idps"
+    tags:
+      - "conflict-violence"
+    resource:
+      name: "IDPs Data for"
+      description: "Curated IDPs Data with HXL hashtags"
+      filename: "hapi_idps"
+    hxltags:
+      location_code: "#country+code"
+      has_hrp: "#meta+has_hrp"
+      in_gho: "#meta+in_gho"
+      provider_admin1_name: "#adm1+name+provider"
+      provider_admin2_name: "#adm2+name+provider"
+      admin1_code: "#adm1+code"
+      admin1_name: "#adm1+name"
+      admin2_code: "#adm2+code"
+      admin2_name: "#adm2+name"
+      operation: "#operation+name"
+      assessment_type: "#assessment+type"
+      population: "#affected+idps"
+      reporting_round: "#round+code"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
+  national_risk:
+    view: "national_risk"
+    tags:
+      - "hazards and risk"
+    resource:
+      name: "National Risk Data for"
+      description: "Curated National Risk Data with HXL hashtags"
+      filename: "hapi_national_risk"
+    hxltags:
+      location_code: "#country+code"
+      has_hrp: "#meta+has_hrp"
+      in_gho: "#meta+in_gho"
+      risk_class: "#risk+class"
+      global_rank: "#risk+rank"
+      overall_risk: "#risk+total"
+      hazard_exposure_risk: "#risk+hazard"
+      vulnerability_risk: "#risk+vulnerability"
+      coping_capacity_risk: "#risk+coping+capacity"
+      meta_missing_indicators_pct: "#meta+missing+indicators+pct"
+      meta_avg_recentness_years: "#meta+recentness+avg"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
+  refugees:
+    view: "refugees"
+    tags:
+      - "refugees"
+    resource:
+      name: "Refugees Data for"
+      description: "Curated Refugees Data with HXL hashtags"
+      filename: "hapi_refugees"
+    hxltags:
+      origin_location_code: "#country+code+origin"
+      origin_has_hrp: "#meta+has_hrp+origin"
+      origin_in_gho: "#meta+in_gho+origin"
+      asylum_location_code: "#country+code+asylum"
+      asylum_has_hrp: "#meta+has_hrp+asylum"
+      asylum_in_gho: "#meta+in_gho+asylum"
+      population_group: "#population_group+code"
+      gender: "#gender+code"
+      age_range: "#age+range"
+      min_age: "#age+min"
+      max_age: "#age+max"
+      population: "#population"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
+  returnees:
+    view: "returnees"
+    tags:
+      - "returnees"
+    resource:
+      name: "Returnees Data for"
+      description: "Curated Returnees Data with HXL hashtags"
+      filename: "hapi_returnees"
+    hxltags:
+      origin_location_code: "#country+code+origin"
+      origin_has_hrp: "#meta+has_hrp+origin"
+      origin_in_gho: "#meta+in_gho+origin"
+      asylum_location_code: "#country+code+asylum"
+      asylum_has_hrp: "#meta+has_hrp+asylum"
+      asylum_in_gho: "#meta+in_gho+asylum"
+      population_group: "#population_group+code"
+      gender: "#gender+code"
+      age_range: "#age+range"
+      min_age: "#age+min"
+      max_age: "#age+max"
+      population: "#population"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"

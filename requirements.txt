@@ -100,7 +100,7 @@ markdown-it-py==3.0.0
     # via rich
 marko==2.1.2
     # via frictionless
-markupsafe==3.0.1
+markupsafe==3.0.2
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py

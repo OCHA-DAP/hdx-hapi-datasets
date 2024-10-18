@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Update Postgres Client
         run: |
-          sudo apt -y install postgresql-client-17
+          sudo apt -y install postgresql-client-16
       - uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v5

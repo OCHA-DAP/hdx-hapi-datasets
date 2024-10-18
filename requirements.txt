@@ -44,7 +44,7 @@ frictionless==5.18.0
     # via hdx-python-utilities
 greenlet==3.1.1
     # via sqlalchemy
-hapi-schema @ git+ssh://git@github.com/OCHA-DAP/hapi-sqlalchemy-schema@e9b46fcb26b831f432d11ead4f0aa2b04c154357#egg=hapi-schema
+hapi-schema @ git+https://git@github.com/OCHA-DAP/hapi-sqlalchemy-schema@e9b46fcb26b831f432d11ead4f0aa2b04c154357#egg=hapi-schema
     # via hdx-hapi-datasets (pyproject.toml)
 hdx-python-api==6.3.4
     # via hdx-hapi-datasets (pyproject.toml)

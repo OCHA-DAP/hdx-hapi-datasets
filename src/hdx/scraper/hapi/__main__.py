@@ -18,11 +18,9 @@ from hdx.database.dburi import (
 from hdx.database.postgresql import PostgresError
 from hdx.facades.keyword_arguments import facade
 from hdx.scraper.hapi.country_dataset import CountryDataset
-from hdx.utilities.dateparse import now_utc
 from hdx.utilities.dictandlist import args_to_dict
 from hdx.utilities.downloader import Download
 from hdx.utilities.easy_logging import setup_logging
-from hdx.utilities.errors_onexit import ErrorsOnExit
 from hdx.utilities.path import (
     script_dir_plus_file,
     wheretostart_tempdir_batch,
@@ -105,67 +103,63 @@ def main(
         if not db_uri:
             db_uri = configuration["default_db_uri"]
         params = get_params_from_connection_uri(db_uri)
-    with ErrorsOnExit() as errors_on_exit:
-        with wheretostart_tempdir_batch(lookup) as info:
-            folder = info["folder"]
-            batch = info["batch"]
-            with Download() as downloader:
-                retriever = Retrieve(
-                    downloader,
-                    folder,
-                    "saved_data",
-                    folder,
-                    save,
-                    use_saved,
-                )
-                path = retriever.download_file(restore_url)
-                if "pg_restore_file" not in params:
-                    params["pg_restore_file"] = path
-                if "prepare_fn" not in params:
-                    params["prepare_fn"] = prepare_hapi_views
-                logger.info(f"> Database parameters: {params}")
-                try:
+    with wheretostart_tempdir_batch(lookup) as info:
+        folder = info["folder"]
+        batch = info["batch"]
+        with Download() as downloader:
+            retriever = Retrieve(
+                downloader,
+                folder,
+                "saved_data",
+                folder,
+                save,
+                use_saved,
+            )
+            path = retriever.download_file(restore_url)
+            if "pg_restore_file" not in params:
+                params["pg_restore_file"] = path
+            if "prepare_fn" not in params:
+                params["prepare_fn"] = prepare_hapi_views
+            logger.info(f"> Database parameters: {params}")
+            try:
+                database = Database(**params)
+            except PostgresError as ex:
+                if 'table "location" does not exist' in str(ex):
                     database = Database(**params)
-                except PostgresError as ex:
-                    if 'table "location" does not exist' in str(ex):
-                        database = Database(**params)
-                    else:
-                        raise ex
-                subcategories = configuration["subcategories"]
-                today = now_utc()
-                try:
-                    subcategory_reader = SubcategoryReader(
-                        configuration,
-                        database,
-                        today,
-                        errors_on_exit,
+                else:
+                    raise ex
+            subcategories = configuration["subcategories"]
+            try:
+                subcategory_reader = SubcategoryReader(
+                    configuration,
+                    database,
+                )
+                for countryiso3 in subcategory_reader.get_all_countries():
+                    country_dataset = CountryDataset(
+                        folder, configuration, countryiso3
                     )
-                    for countryiso3 in subcategory_reader.get_all_countries():
-                        country_dataset = CountryDataset(
-                            folder, configuration, countryiso3
+                    for _, subcategory_info in subcategories.items():
+                        subcategory_reader.view_by_location(
+                            country_dataset, subcategory_info, countryiso3
                         )
-                        for _, subcategory_info in subcategories.items():
-                            subcategory_reader.view_by_location(
-                                country_dataset, subcategory_info, countryiso3
-                            )
 
-                        dataset = country_dataset.get_dataset()
-                        if dataset:
-                            dataset.update_from_yaml(
-                                script_dir_plus_file(
-                                    join("config", "hdx_dataset_static.yaml"),
-                                    main,
-                                )
+                    dataset = country_dataset.get_dataset()
+                    if dataset:
+                        dataset.update_from_yaml(
+                            script_dir_plus_file(
+                                join("config", "hdx_dataset_static.yaml"),
+                                main,
                             )
-                            dataset.create_in_hdx(
-                                remove_additional_resources=True,
-                                hxl_update=False,
-                                updated_by_script=updated_by_script,
-                                batch=batch,
-                            )
+                        )
+                        dataset.create_in_hdx(
+                            remove_additional_resources=True,
+                            hxl_update=False,
+                            updated_by_script=updated_by_script,
+                            batch=batch,
+                        )
 
-                finally:
-                    database.cleanup()
+            finally:
+                database.cleanup()
     logger.info("HDX HAPI datasets completed!")
 
 

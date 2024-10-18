@@ -54,7 +54,7 @@ class CountryDataset:
     def get_dataset(self) -> Optional[Dataset]:
         if len(self.dataset.get_resources()) == 0:
             return None
-        self.dataset.add_tags(list(self.tags))
+        self.dataset.add_tags(sorted(self.tags))
         self.dataset.set_time_period(self.start_date, self.end_date)
         return self.dataset
 
@@ -70,7 +70,7 @@ class CountryDataset:
         resource_name = f"{resource_name} {country_name}"
         resource_description = resource_info["description"]
         filename = resource_info["filename"]
-        filename = f"{filename}_{countryiso3}.csv"
+        filename = f"{filename}_{countryiso3.lower()}.csv"
         resourcedata = {
             "name": resource_name,
             "description": resource_description,

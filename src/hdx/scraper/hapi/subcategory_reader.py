@@ -1,6 +1,5 @@
 import logging
-from datetime import datetime
-from typing import Dict, Optional, Sequence
+from typing import Dict, Sequence
 
 from sqlalchemy import select
 
@@ -11,7 +10,6 @@ from hdx.scraper.hapi.country_dataset import CountryDataset
 from hdx.utilities.dateparse import (
     iso_string_from_datetime,
 )
-from hdx.utilities.errors_onexit import ErrorsOnExit
 
 logger = logging.getLogger(__name__)
 
@@ -21,14 +19,10 @@ class SubcategoryReader:
         self,
         configuration: Configuration,
         database: Database,
-        today: datetime,
-        errors_on_exit: Optional[ErrorsOnExit] = None,
     ):
         self.configuration = configuration
         self.session = database.get_session()
         self.views = database.get_prepare_results()
-        self.today = today
-        self.errors_on_exit = errors_on_exit
 
     def get_all_countries(self) -> Sequence:
         view = self.views["data_availability"]

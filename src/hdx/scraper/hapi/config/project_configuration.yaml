@@ -191,7 +191,9 @@ subcategories:
   idps:
     view: "idps"
     tags:
-      - "conflict-violence"
+      - "displacement"
+      - "internally displaced persons-idp"
+      - "migration"
     resource:
       name: "IDPs Data for"
       description: "Curated IDPs Data with HXL hashtags"
@@ -294,7 +296,7 @@ subcategories:
     resource:
       name: "Poverty Rate Data for"
       description: "Curated Poverty Rate with HXL hashtags"
-      filename: "poverty_rate"
+      filename: "hapi_poverty_rate"
     hxltags:
       location_code: "#country+code"
       has_hrp: "#meta+has_hrp"

@@ -1,11 +1,12 @@
 import logging
 from datetime import datetime
-from typing import Dict, Optional
+from typing import Dict, Optional, Sequence
 
 from sqlalchemy import select
 
 from hdx.api.configuration import Configuration
 from hdx.database import Database
+from hdx.location.country import Country
 from hdx.scraper.hapi.country_dataset import CountryDataset
 from hdx.utilities.dateparse import (
     iso_string_from_datetime,
@@ -20,19 +21,32 @@ class SubcategoryReader:
         self,
         configuration: Configuration,
         database: Database,
-        country_dataset: CountryDataset,
         today: datetime,
         errors_on_exit: Optional[ErrorsOnExit] = None,
     ):
         self.configuration = configuration
         self.session = database.get_session()
         self.views = database.get_prepare_results()
-        self.country_dataset = country_dataset
         self.today = today
         self.errors_on_exit = errors_on_exit
 
+    def get_all_countries(self) -> Sequence:
+        view = self.views["data_availability"]
+        countryiso3s = []
+        for countryiso3 in self.session.scalars(
+            select(view.c.location_code).distinct()
+        ).all():
+            country_info = Country.get_country_info_from_iso3(countryiso3)
+            if country_info["#indicator+incomelevel"].lower() == "high":
+                continue
+            countryiso3s.append(countryiso3)
+        return sorted(countryiso3s)
+
     def view_by_location(
-        self, subcategory_info: Dict, countryiso3: str
+        self,
+        country_dataset: CountryDataset,
+        subcategory_info: Dict,
+        countryiso3: str,
     ) -> bool:
         view_name = subcategory_info["view"]
         logger.info(f"Processing subcategory {view_name}")
@@ -57,15 +71,15 @@ class SubcategoryReader:
             for header, hxltag in hxltags.items():
                 value = result[headers_to_index[header]]
                 if hxltag == "#date+start":
-                    self.country_dataset.update_start_date(value)
+                    country_dataset.update_start_date(value)
                     value = iso_string_from_datetime(value)
                 elif hxltag == "#date+end":
-                    self.country_dataset.update_end_date(value)
+                    country_dataset.update_end_date(value)
                     value = iso_string_from_datetime(value)
                 row[header] = str(value)
             rows.append(row)
         if len(rows) == 0:
             return False
-        self.country_dataset.add_tags(subcategory_info["tags"])
+        country_dataset.add_tags(subcategory_info["tags"])
         resource_info = subcategory_info["resource"]
-        return self.country_dataset.add_resource(resource_info, hxltags, rows)
+        return country_dataset.add_resource(resource_info, hxltags, rows)

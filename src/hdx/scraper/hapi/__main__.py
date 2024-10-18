@@ -131,24 +131,22 @@ def main(
                         database = Database(**params)
                     else:
                         raise ex
-                countryiso3s = configuration["countries"]
                 subcategories = configuration["subcategories"]
                 today = now_utc()
                 try:
-                    for countryiso3 in countryiso3s:
+                    subcategory_reader = SubcategoryReader(
+                        configuration,
+                        database,
+                        today,
+                        errors_on_exit,
+                    )
+                    for countryiso3 in subcategory_reader.get_all_countries():
                         country_dataset = CountryDataset(
                             folder, configuration, countryiso3
                         )
-                        subcategory_reader = SubcategoryReader(
-                            configuration,
-                            database,
-                            country_dataset,
-                            today,
-                            errors_on_exit,
-                        )
                         for _, subcategory_info in subcategories.items():
                             subcategory_reader.view_by_location(
-                                subcategory_info, countryiso3
+                                country_dataset, subcategory_info, countryiso3
                             )
 
                         dataset = country_dataset.get_dataset()

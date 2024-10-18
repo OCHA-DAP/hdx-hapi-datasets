@@ -4,9 +4,6 @@ dataset:
   title: "Curated data for"
   name: "hdx-hapi-"
 
-countries:
-  - "LBN"
-
 subcategories:
   funding:
     view: "funding"
@@ -26,6 +23,59 @@ subcategories:
       requirements_usd: "#value+funding+required+usd"
       funding_usd: "#value+funding+total+usd"
       funding_pct: "#value+funding+pct"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
+  population:
+    view: "population"
+    tags:
+      - "baseline population"
+    resource:
+      name: "Population Data for"
+      description: "Curated Population Data with HXL hashtags"
+      filename: "hapi_population"
+    hxltags:
+      location_code: "#country+code"
+      has_hrp: "#meta+has_hrp"
+      in_gho: "#meta+in_gho"
+      provider_admin1_name: "#adm1+name+provider"
+      provider_admin2_name: "#adm2+name+provider"
+      admin1_code: "#adm1+code"
+      admin1_name: "#adm1+name"
+      admin2_code: "#adm2+code"
+      admin2_name: "#adm2+name"
+      gender: "#gender+code"
+      age_range: "#age+range"
+      min_age: "#age+min"
+      max_age: "#age+max"
+      population: "#population"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
+  humanitarian_needs:
+    view: "humanitarian_needs"
+    tags:
+      - "humanitarian needs overview-hno"
+      - "people in need-pin"
+    resource:
+      name: "Humanitarian Needs Data for"
+      description: "Curated Humanitarian Needs Data with HXL hashtags"
+      filename: "hapi_humanitarian_needs"
+    hxltags:
+      location_code: "#country+code"
+      has_hrp: "#meta+has_hrp"
+      in_gho: "#meta+in_gho"
+      provider_admin1_name: "#adm1+name+provider"
+      provider_admin2_name: "#adm2+name+provider"
+      admin1_code: "#adm1+code"
+      admin1_name: "#adm1+name"
+      admin2_code: "#adm2+code"
+      admin2_name: "#adm2+name"
+      sector_code: "#sector+cluster+code"
+      sector_name: "#sector+cluster+name"
+      category: "#category"
+      population_status: "#population+status"
+      population: "#population"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
 
@@ -233,3 +283,45 @@ subcategories:
       population: "#population"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
+
+  poverty_rate:
+    view: "poverty_rate"
+    tags:
+      - "education"
+      - "health"
+      - "indicators"
+      - "poverty"
+    resource:
+      name: "Poverty Rate Data for"
+      description: "Curated Poverty Rate with HXL hashtags"
+      filename: "poverty_rate"
+    hxltags:
+      location_code: "#country+code"
+      has_hrp: "#meta+has_hrp"
+      in_gho: "#meta+in_gho"
+      provider_admin1_name: "#adm1+name+provider"
+      admin1_code: "#adm1+code"
+      admin1_name: "#adm1+name"
+      mpi: "#indicator+mpi"
+      headcount_ratio: "#indicator+headcount_ratio"
+      intensity_of_deprivation: "#indicator+intensity_of_deprivation"
+      vulnerable_to_poverty: "#indicator+vulnerable_to_poverty"
+      in_severe_poverty: "#indicator+in_severe_poverty"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
+  data_availability:
+    view: "data_availability"
+    tags: []
+    resource:
+      name: "Data Availability Data for"
+      description: "Data Availability Data with HXL hashtags"
+      filename: "hapi_data_availability"
+    hxltags:
+      category: "#category"
+      subcategory: "#subcategory"
+      location_code: "#country+code"
+      admin1_code: "#adm1+code"
+      admin1_name: "#adm1+name"
+      admin2_code: "#adm2+code"
+      admin2_name: "#adm2+name"

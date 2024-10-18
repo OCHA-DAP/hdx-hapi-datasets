@@ -19,7 +19,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:16-alpine
+        image: postgres:17-alpine
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
@@ -34,6 +34,12 @@ jobs:
           --name postgres-container
 
     steps:
+      - name: Install latest PostgreSQL client tools
+        run: |
+          sudo apt install -y postgresql-common
+          sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y
+          sudo apt purge -y postgresql-client-common
+          sudo apt install -y postgresql-client
       - uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v5

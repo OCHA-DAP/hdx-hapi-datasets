@@ -40,7 +40,7 @@ updated_by_script = "HDX Scraper: HAPI Datasets"
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="HAPI pipelines")
+    parser = argparse.ArgumentParser(description="HDX HAPI dataset pipeline")
     parser.add_argument(
         "-db", "--db-uri", default=None, help="Database connection string"
     )

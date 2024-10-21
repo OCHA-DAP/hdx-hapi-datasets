@@ -20,18 +20,12 @@ from hdx.facades.keyword_arguments import facade
 from hdx.scraper.hapi.country_dataset import CountryDataset
 from hdx.utilities.dictandlist import args_to_dict
 from hdx.utilities.downloader import Download
-from hdx.utilities.easy_logging import setup_logging
 from hdx.utilities.path import (
     script_dir_plus_file,
     wheretostart_tempdir_batch,
 )
 from hdx.utilities.retriever import Retrieve
 
-setup_logging(
-    console_log_level="INFO",
-    log_file="warnings_errors.log",
-    file_log_level="WARNING",
-)
 logger = logging.getLogger(__name__)
 
 

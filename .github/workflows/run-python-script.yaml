@@ -43,7 +43,7 @@ jobs:
         PREPREFIX: ${{ vars.HDX_USER_AGENT_PREPREFIX }}
         USER_AGENT: ${{ vars.USER_AGENT }}
       run: |
-        python -m hdx.scraper.hapi
+        python -m hdx.scraper.hapi -db "postgresql+psycopg://postgres:postgres@localhost:5432/hapirestore"
     - name: Send mail
       if: failure()
       uses: dawidd6/action-send-mail@v3

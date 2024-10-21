@@ -118,10 +118,11 @@ class TestHAPIPipelineHNO:
                     dataset = country_dataset.get_dataset()
                     assert dataset == {
                         "name": "hdx-hapi-afg",
-                        "title": "Curated data for Afghanistan",
+                        "title": "HDX HAPI data for Afghanistan",
                         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
                         "owner_org": "hdx",
-                        "data_update_frequency": "7",
+                        "dataset_source": "Test Provider",
+                        "data_update_frequency": "1",
                         "groups": [{"name": "afg"}],
                         "subnational": "1",
                         "tags": [
@@ -307,7 +308,7 @@ class TestHAPIPipelineHNO:
                         },
                     ]
                     for subcategory in subcategories:
-                        filename = f"hapi_{subcategory}_afg.csv"
+                        filename = f"hdx_hapi_{subcategory}_afg.csv"
                         expected_file = join(fixtures_dir, filename)
                         actual_file = join(tempdir, filename)
                         assert_files_same(expected_file, actual_file)

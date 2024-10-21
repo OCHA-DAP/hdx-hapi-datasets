@@ -1,9 +1,8 @@
 notes: |
   This dataset contains standardised data obtained from the [HDX HAPI API](https://hapi.humdata.org/).
 
-  The HDX Humanitarian API (HAPI) is a way to access standardised indicators from multiple sources to automate workflows and visualisations. It is a service of the [Humanitarian Data Exchange (HDX)](https://data.humdata.org/), part of OCHA's [Centre for Humanitarian Data](https://centre.humdata.org/)."""
+  The HDX Humanitarian API (HAPI) is a way to access standardised indicators from multiple sources to automate workflows and visualisations. It is a service of the [Humanitarian Data Exchange (HDX)](https://data.humdata.org/), part of OCHA's [Centre for Humanitarian Data](https://centre.humdata.org/).
 license_id: "cc-by-igo"
 methodology: "Registry"
-dataset_source: "Humanitarian partners"
 caveats: ""
 private: False  # has to be True or False

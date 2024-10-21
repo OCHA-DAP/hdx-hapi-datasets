@@ -25,7 +25,6 @@ subcategories:
       funding_pct: "#value+funding+pct"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
-      hdx_provider_name: "#org+name+provider"
 
   population:
     view: "population"
@@ -52,7 +51,6 @@ subcategories:
       population: "#population"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
-      hdx_provider_name: "#org+name+provider"
 
   humanitarian_needs:
     view: "humanitarian_needs"
@@ -80,7 +78,6 @@ subcategories:
       population: "#population"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
-      hdx_provider_name: "#org+name+provider"
 
   operational_presence:
     view: "operational_presence"
@@ -108,7 +105,6 @@ subcategories:
       sector_name: "#sector+cluster+name"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
-      hdx_provider_name: "#org+name+provider"
 
   food_price:
     view: "food_price"
@@ -142,7 +138,6 @@ subcategories:
       price: "#value"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
-      hdx_provider_name: "#org+name+provider"
 
   food_security:
     view: "food_security"
@@ -168,7 +163,6 @@ subcategories:
       population_fraction_in_phase: "#affected+pct"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
-      hdx_provider_name: "#org+name+provider"
 
   conflict_event:
     view: "conflict_event"
@@ -193,7 +187,6 @@ subcategories:
       fatalities: "#affected+killed"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
-      hdx_provider_name: "#org+name+provider"
 
   idps:
     view: "idps"
@@ -221,7 +214,6 @@ subcategories:
       reporting_round: "#round+code"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
-      hdx_provider_name: "#org+name+provider"
 
   national_risk:
     view: "national_risk"
@@ -245,7 +237,6 @@ subcategories:
       meta_avg_recentness_years: "#meta+recentness+avg"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
-      hdx_provider_name: "#org+name+provider"
 
   refugees:
     view: "refugees"
@@ -270,7 +261,6 @@ subcategories:
       population: "#population"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
-      hdx_provider_name: "#org+name+provider"
 
   returnees:
     view: "returnees"
@@ -295,7 +285,6 @@ subcategories:
       population: "#population"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
-      hdx_provider_name: "#org+name+provider"
 
   poverty_rate:
     view: "poverty_rate"
@@ -322,7 +311,6 @@ subcategories:
       in_severe_poverty: "#indicator+in_severe_poverty"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
-      hdx_provider_name: "#org+name+provider"
 
   data_availability:
     view: "data_availability"

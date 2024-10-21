@@ -1,3 +1,0 @@
-location_code,has_hrp,in_gho,provider_admin1_name,provider_admin2_name,admin1_code,admin1_name,admin2_code,admin2_name,operation,assessment_type,population,reporting_round,reference_period_start,reference_period_end
-#country+code,#meta+has_hrp,#meta+in_gho,#adm1+name+provider,#adm2+name+provider,#adm1+code,#adm1+name,#adm2+code,#adm2+name,#operation+name,#assessment+type,#affected+idps,#round+code,#date+start,#date+end
-AFG,False,False,AB Region,AB Place,AB01,AB01 adm1,AB01-XXX,Unspecified,operation,DTMAssessmentType.SITE,100,1,2024-01-01,2024-12-31

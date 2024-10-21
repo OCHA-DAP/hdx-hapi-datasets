@@ -69,23 +69,22 @@ class SubcategoryReader:
         hxltags = subcategory_info["hxltags"]
         rows = []
         for result in results:
+            index = headers_to_index.get("resource_hdx_id")
+            if index is not None:
+                resource_hdx_id = result[index]
+                dataset_provider_name = (
+                    self.resource_hdx_id_to_hdx_provider_name[resource_hdx_id]
+                )
+                country_dataset.add_sources(dataset_provider_name)
             row = {}
             for header, hxltag in hxltags.items():
-                if hxltag == "#org+name+provider":
-                    resource_hdx_id = result[
-                        headers_to_index["resource_hdx_id"]
-                    ]
-                    value = self.resource_hdx_id_to_hdx_provider_name[
-                        resource_hdx_id
-                    ]
-                else:
-                    value = result[headers_to_index[header]]
-                    if hxltag == "#date+start":
-                        country_dataset.update_start_date(value)
-                        value = iso_string_from_datetime(value)
-                    elif hxltag == "#date+end":
-                        country_dataset.update_end_date(value)
-                        value = iso_string_from_datetime(value)
+                value = result[headers_to_index[header]]
+                if hxltag == "#date+start":
+                    country_dataset.update_start_date(value)
+                    value = iso_string_from_datetime(value)
+                elif hxltag == "#date+end":
+                    country_dataset.update_end_date(value)
+                    value = iso_string_from_datetime(value)
                 row[header] = str(value)
             rows.append(row)
         if len(rows) == 0:

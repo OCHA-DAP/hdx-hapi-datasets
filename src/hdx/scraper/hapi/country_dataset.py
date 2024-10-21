@@ -38,6 +38,7 @@ class CountryDataset:
         self.tags = {"hxl"}
         self.start_date = default_enddate
         self.end_date = default_date
+        self.sources = set()
         self.dataset.set_subnational(True)
 
     def update_start_date(self, date: datetime) -> None:
@@ -51,11 +52,15 @@ class CountryDataset:
     def add_tags(self, tags: List[str]) -> None:
         self.tags.update(tags)
 
+    def add_sources(self, sources: List[str]) -> None:
+        self.sources.add(sources)
+
     def get_dataset(self) -> Optional[Dataset]:
         if len(self.dataset.get_resources()) == 0:
             return None
         self.dataset.add_tags(sorted(self.tags))
         self.dataset.set_time_period(self.start_date, self.end_date)
+        self.dataset["dataset_source"] = ", ".join(sorted(self.sources))
         return self.dataset
 
     def add_resource(

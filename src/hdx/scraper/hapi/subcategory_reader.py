@@ -23,6 +23,14 @@ class SubcategoryReader:
         self.configuration = configuration
         self.session = database.get_session()
         self.views = database.get_prepare_results()
+        view = self.views["resource"]
+        results = self.session.execute(
+            select(view.c.hdx_id, view.c.dataset_hdx_provider_name)
+        ).all()
+        self.resource_hdx_id_to_hdx_provider_name = {
+            hdx_id: dataset_hdx_provider_name
+            for hdx_id, dataset_hdx_provider_name in results
+        }
 
     def get_all_countries(self) -> Sequence:
         view = self.views["data_availability"]
@@ -63,13 +71,21 @@ class SubcategoryReader:
         for result in results:
             row = {}
             for header, hxltag in hxltags.items():
-                value = result[headers_to_index[header]]
-                if hxltag == "#date+start":
-                    country_dataset.update_start_date(value)
-                    value = iso_string_from_datetime(value)
-                elif hxltag == "#date+end":
-                    country_dataset.update_end_date(value)
-                    value = iso_string_from_datetime(value)
+                if hxltag == "#org+name+provider":
+                    resource_hdx_id = result[
+                        headers_to_index["resource_hdx_id"]
+                    ]
+                    value = self.resource_hdx_id_to_hdx_provider_name[
+                        resource_hdx_id
+                    ]
+                else:
+                    value = result[headers_to_index[header]]
+                    if hxltag == "#date+start":
+                        country_dataset.update_start_date(value)
+                        value = iso_string_from_datetime(value)
+                    elif hxltag == "#date+end":
+                        country_dataset.update_end_date(value)
+                        value = iso_string_from_datetime(value)
                 row[header] = str(value)
             rows.append(row)
         if len(rows) == 0:

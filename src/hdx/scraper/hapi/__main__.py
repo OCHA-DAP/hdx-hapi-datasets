@@ -7,7 +7,6 @@ from os.path import expanduser, join
 from typing import Optional
 
 from hapi_schema.views import prepare_hapi_views
-from subcategory_reader import SubcategoryReader
 
 from hdx.api.configuration import Configuration
 from hdx.database import Database
@@ -16,7 +15,6 @@ from hdx.database.dburi import (
 )
 from hdx.database.postgresql import PostgresError
 from hdx.facades.keyword_arguments import facade
-from hdx.scraper.hapi.country_dataset import CountryDataset
 from hdx.utilities.dictandlist import args_to_dict
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import (
@@ -26,6 +24,8 @@ from hdx.utilities.path import (
 from hdx.utilities.retriever import Retrieve
 
 from ._version import __version__
+from .country_dataset import CountryDataset
+from .subcategory_reader import SubcategoryReader
 
 logger = logging.getLogger(__name__)
 

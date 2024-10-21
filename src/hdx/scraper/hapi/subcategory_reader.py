@@ -6,10 +6,11 @@ from sqlalchemy import select
 from hdx.api.configuration import Configuration
 from hdx.database import Database
 from hdx.location.country import Country
-from hdx.scraper.hapi.country_dataset import CountryDataset
 from hdx.utilities.dateparse import (
     iso_string_from_datetime,
 )
+
+from .country_dataset import CountryDataset
 
 logger = logging.getLogger(__name__)
 

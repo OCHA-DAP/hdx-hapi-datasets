@@ -7,7 +7,7 @@
 This pipeline reads the database dump from HAPI and creates country datasets
 on HDX.
 
-This library is part of the [Humanitarian Data Exchange](https://data.humdata.org/) (HDX) project. 
+This library is part of the [Humanitarian Data Exchange](https://data.humdata.org/) (HDX) project.
 If you have humanitarian related data, please upload your datasets to HDX.
 
 ## Running

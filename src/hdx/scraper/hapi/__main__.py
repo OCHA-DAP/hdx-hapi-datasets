@@ -6,7 +6,6 @@ from os import getenv
 from os.path import expanduser, join
 from typing import Optional
 
-from _version import __version__
 from hapi_schema.views import prepare_hapi_views
 from subcategory_reader import SubcategoryReader
 
@@ -25,6 +24,8 @@ from hdx.utilities.path import (
     wheretostart_tempdir_batch,
 )
 from hdx.utilities.retriever import Retrieve
+
+from ._version import __version__
 
 logger = logging.getLogger(__name__)
 

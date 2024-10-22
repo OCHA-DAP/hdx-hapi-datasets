@@ -14,11 +14,7 @@ subcategories:
       - "migration"
     resource:
       name: "IDPs Data for"
-      description: |
-        IDPs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons) for more information
-        Source: International Organization for Migration (IOM)
-        License: Copyright © International Organization for Migration 2018 IOM reserves the right to assert ownership of the Materials collected on the https://data.humdata.org/ website. The Materials may be viewed, downloaded, and printed for non-commercial use only, without, inter alia, any right to sell, resell, redistribute or create derivative works therefrom.
-        At all times the User shall credit the DTM as the source, unless otherwise stated. The user must include the URL of the Materials from the HDX Website, as well as the following credit line: Source: “International Organization for Migration (IOM), Displacement Tracking Matrix (DTM)”.
+      description: "IDPs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons) for more information \n Source: International Organization for Migration (IOM) \n License: Copyright © International Organization for Migration 2018 IOM reserves the right to assert ownership of the Materials collected on the https://data.humdata.org/ website. The Materials may be viewed, downloaded, and printed for non-commercial use only, without, inter alia, any right to sell, resell, redistribute or create derivative works therefrom. At all times the User shall credit the DTM as the source, unless otherwise stated. The user must include the URL of the Materials from the HDX Website, as well as the following credit line: Source: \“International Organization for Migration (IOM), Displacement Tracking Matrix (DTM)\”."
       filename: "hdx_hapi_idps"
     hxltags:
       location_code: "#country+code"
@@ -43,10 +39,7 @@ subcategories:
       - "refugees"
     resource:
       name: "Refugees Data for"
-      description: |
-        Refugees and persons of concern data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#refugees-persons-of-concern) for more information
-        Source: [UNHCR](https://data.humdata.org/organization/unhcr)
-        License: (Creative Commons Attribution for Intergovernmental Organisations)[https://data.humdata.org/faqs/licenses]
+      description: "Refugees and persons of concern data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#refugees-persons-of-concern) for more information \n Source: [UNHCR](https://data.humdata.org/organization/unhcr) \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
       filename: "hdx_hapi_refugees"
     hxltags:
       origin_location_code: "#country+code+origin"
@@ -70,12 +63,7 @@ subcategories:
       - "returnees"
     resource:
       name: "Returnees Data for"
-      description: >
-        Returnees data from HDX HAPI, please see
-        [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#returnees)
-        for more information
-        \n \n Source: [UNHCR](https://data.humdata.org/organization/unhcr)
-        \n \n License: (Creative Commons Attribution for Intergovernmental Organisations)[https://data.humdata.org/faqs/licenses]
+      description: "Returnees data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#returnees) for more information \n Source: [UNHCR](https://data.humdata.org/organization/unhcr) \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
       filename: "hdx_hapi_returnees"
     hxltags:
       origin_location_code: "#country+code+origin"
@@ -100,12 +88,7 @@ subcategories:
       - "people in need-pin"
     resource:
       name: "Humanitarian Needs Data for"
-      description: >
-        Humanitarian needs data from HDX HAPI, please see
-        [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#humanitarian-needs)
-        for more information
-        \n \n Source: [OCHA HPC Tools](https://data.humdata.org/organization/49f12a06-1605-4f98-89f1-eaec37a0fdfe)
-        \n \n License: (Creative Commons Attribution for Intergovernmental Organisations)[https://data.humdata.org/faqs/licenses]
+      description: "Humanitarian needs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#humanitarian-needs) for more information \n Source: [OCHA HPC Tools](https://data.humdata.org/organization/49f12a06-1605-4f98-89f1-eaec37a0fdfe) \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
       filename: "hdx_hapi_humanitarian_needs"
     hxltags:
       location_code: "#country+code"
@@ -122,6 +105,33 @@ subcategories:
       category: "#category"
       population_status: "#population+status"
       population: "#population"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
+  operational_presence:
+    view: "operational_presence"
+    tags:
+      - "operational presence"
+      - "who is doing what and where-3w-4w-5w"
+    resource:
+      name: "Operational Presence Data for"
+      description: "Who is doing What Where - Operational Presence data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#who-is-doing-what-where-operational-presence) for more information \n Source: [OCHA Lebanon](https://data.humdata.org/organization/a5d3183c-aa19-4320-be20-afb8eeb23ba9  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
+      filename: "hdx_hapi_operational_presence"
+    hxltags:
+      location_code: "#country+code"
+      has_hrp: "#meta+has_hrp"
+      in_gho: "#meta+in_gho"
+      provider_admin1_name: "#adm1+name+provider"
+      provider_admin2_name: "#adm2+name+provider"
+      admin1_code: "#adm1+code"
+      admin1_name: "#adm1+name"
+      admin2_code: "#adm2+code"
+      admin2_name: "#adm2+name"
+      org_acronym: "#org+acronym"
+      org_name: "#org+name"
+      org_type_description: "#org+type"
+      sector_code: "#sector+cluster+code"
+      sector_name: "#sector+cluster+name"
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
 
@@ -178,32 +188,6 @@ subcategories:
 
 
 
-  operational_presence:
-    view: "operational_presence"
-    tags:
-      - "operational presence"
-      - "who is doing what and where-3w-4w-5w"
-    resource:
-      name: "Operational Presence Data for"
-      description: "Curated Operational Presence Data with HXL hashtags"
-      filename: "hdx_hapi_operational_presence"
-    hxltags:
-      location_code: "#country+code"
-      has_hrp: "#meta+has_hrp"
-      in_gho: "#meta+in_gho"
-      provider_admin1_name: "#adm1+name+provider"
-      provider_admin2_name: "#adm2+name+provider"
-      admin1_code: "#adm1+code"
-      admin1_name: "#adm1+name"
-      admin2_code: "#adm2+code"
-      admin2_name: "#adm2+name"
-      org_acronym: "#org+acronym"
-      org_name: "#org+name"
-      org_type_description: "#org+type"
-      sector_code: "#sector+cluster+code"
-      sector_name: "#sector+cluster+name"
-      reference_period_start: "#date+start"
-      reference_period_end: "#date+end"
 
   food_price:
     view: "food_price"

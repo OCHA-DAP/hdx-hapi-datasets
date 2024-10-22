@@ -5,13 +5,56 @@ dataset:
   name: "hdx-hapi-"
 
 subcategories:
+  idps:
+    view: "idps"
+    tags:
+      - "displacement"
+      - "internally displaced persons-idp"
+      - "migration"
+    resource:
+      name: "IDPs Data for"
+      description: > 
+        IDPs data from HDX HAPI, please see 
+        [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons)
+        for more information \n
+        Source: International Organization for Migration (IOM) \n
+        License: 
+        Copyright © International Organization for Migration 2018 IOM reserves the
+        right to assert ownership of the Materials collected on the
+        https://data.humdata.org/ website. The Materials may be viewed,
+        downloaded, and printed for non-commercial use only, without, inter alia,
+        any right to sell, resell, redistribute or create derivative works therefrom.
+        At all times the User shall credit the DTM as the source, unless otherwise
+        stated. The user must include the URL of the Materials from the HDX Website,
+        as well as the following credit line: Source: “International Organization for
+        Migration (IOM), Displacement Tracking Matrix (DTM)”.
+      filename: "hdx_hapi_idps"
+    hxltags:
+      location_code: "#country+code"
+      has_hrp: "#meta+has_hrp"
+      in_gho: "#meta+in_gho"
+      provider_admin1_name: "#adm1+name+provider"
+      provider_admin2_name: "#adm2+name+provider"
+      admin1_code: "#adm1+code"
+      admin1_name: "#adm1+name"
+      admin2_code: "#adm2+code"
+      admin2_name: "#adm2+name"
+      operation: "#operation+name"
+      assessment_type: "#assessment+type"
+      population: "#affected+idps"
+      reporting_round: "#round+code"
+      reference_period_start: "#date+start"
+      reference_period_end: "#date+end"
+
   funding:
     view: "funding"
     tags:
       - "funding"
     resource:
       name: "Funding Data for"
-      description: "Curated Funding Data with HXL hashtags"
+      description: >
+        Funding data from HDX HAPI, please see the documentation for more information\n
+        Source: OCHA Financial Tracking System (FTS)
       filename: "hdx_hapi_funding"
     hxltags:
       location_code: "#country+code"
@@ -32,7 +75,9 @@ subcategories:
       - "baseline population"
     resource:
       name: "Population Data for"
-      description: "Curated Population Data with HXL hashtags"
+      description: > 
+        Curated Population Data with HXL hashtags \n
+        Source: UNFPA, OCHA country offices
       filename: "hdx_hapi_population"
     hxltags:
       location_code: "#country+code"
@@ -59,7 +104,9 @@ subcategories:
       - "people in need-pin"
     resource:
       name: "Humanitarian Needs Data for"
-      description: "Curated Humanitarian Needs Data with HXL hashtags"
+      description: > 
+        Curated Humanitarian Needs Data with HXL hashtags
+        Source:
       filename: "hdx_hapi_humanitarian_needs"
     hxltags:
       location_code: "#country+code"
@@ -188,32 +235,7 @@ subcategories:
       reference_period_start: "#date+start"
       reference_period_end: "#date+end"
 
-  idps:
-    view: "idps"
-    tags:
-      - "displacement"
-      - "internally displaced persons-idp"
-      - "migration"
-    resource:
-      name: "IDPs Data for"
-      description: "Curated IDPs Data with HXL hashtags"
-      filename: "hdx_hapi_idps"
-    hxltags:
-      location_code: "#country+code"
-      has_hrp: "#meta+has_hrp"
-      in_gho: "#meta+in_gho"
-      provider_admin1_name: "#adm1+name+provider"
-      provider_admin2_name: "#adm2+name+provider"
-      admin1_code: "#adm1+code"
-      admin1_name: "#adm1+name"
-      admin2_code: "#adm2+code"
-      admin2_name: "#adm2+name"
-      operation: "#operation+name"
-      assessment_type: "#assessment+type"
-      population: "#affected+idps"
-      reporting_round: "#round+code"
-      reference_period_start: "#date+start"
-      reference_period_end: "#date+end"
+
 
   national_risk:
     view: "national_risk"

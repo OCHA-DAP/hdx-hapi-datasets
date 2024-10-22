@@ -71,12 +71,14 @@ class SubcategoryReader:
         rows = []
         for result in results:
             index = headers_to_index.get("resource_hdx_id")
+            sources = set()
             if index is not None:
                 resource_hdx_id = result[index]
                 dataset_provider_name = (
                     self.resource_hdx_id_to_hdx_provider_name[resource_hdx_id]
                 )
                 country_dataset.add_sources(dataset_provider_name)
+                sources.add(dataset_provider_name)
             row = {}
             for header, hxltag in hxltags.items():
                 value = result[headers_to_index[header]]

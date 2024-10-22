@@ -129,7 +129,7 @@ def main(
                     configuration,
                     database,
                 )
-                #for countryiso3 in subcategory_reader.get_all_countries():
+                # for countryiso3 in subcategory_reader.get_all_countries():
                 for countryiso3 in ["LBN"]:
                     country_dataset = CountryDataset(
                         folder, configuration, countryiso3

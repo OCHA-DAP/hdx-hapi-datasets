@@ -1,21 +1,21 @@
 notes: |
-  This dataset contains data obtained from the 
+  This dataset contains data obtained from the
   [HDX Humanitarian API](https://hapi.humdata.org/) (HDX HAPI),
   which provides standardized humanitarian indicators designed
   for seamless interoperability from multiple sources.
-  The data facilitates automated workflows and visualizations 
-  to support humanitarian decision making. 
-  For more information, please see the HDX HAPI 
+  The data facilitates automated workflows and visualizations
+  to support humanitarian decision making.
+  For more information, please see the HDX HAPI
   [landing page](https://data.humdata.org/hapi)
-  and 
+  and
   [documentation](https://hdx-hapi.readthedocs.io/en/latest/).
-license_id: other
+license_id: hdx-other
 license_other: >
-  Multiple licenses, please see individual resources for specific license 
+  Multiple licenses, please see individual resources for specific license
   information
 methodology: Registry
 caveats: >
-  HDX HAPI is refreshed daily, but the source datasets may have different 
-  update schedules. Please refer to the source datasets for each subcategory 
-  to verify their specific update frequency..
+  HDX HAPI is refreshed daily, but the source datasets may have different
+  update schedules. Please refer to the source datasets for each subcategory
+  to verify their specific update frequency.
 private: False  # has to be True or False

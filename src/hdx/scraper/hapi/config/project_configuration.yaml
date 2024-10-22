@@ -14,7 +14,7 @@ subcategories:
       - "migration"
     resource:
       name: "IDPs Data for"
-      description: "IDPs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons) for more information  \n Source: International Organization for Migration (IOM)  \n License: Copyright © International Organization for Migration 2018 IOM reserves the right to assert ownership of the Materials collected on the https://data.humdata.org/ website. The Materials may be viewed, downloaded, and printed for non-commercial use only, without, inter alia, any right to sell, resell, redistribute or create derivative works therefrom. At all times the User shall credit the DTM as the source, unless otherwise stated. The user must include the URL of the Materials from the HDX Website, as well as the following credit line: Source: \"International Organization for Migration (IOM), Displacement Tracking Matrix (DTM)\"."
+      description: "IDPs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons) for more information  \n Source: [International Organization for Migration (IOM)](https://data.humdata.org/organization/f53d32cd-132c-4ef4-bc6d-058f94d08adf?)  \n License: Copyright © International Organization for Migration 2018 IOM reserves the right to assert ownership of the Materials collected on the https://data.humdata.org/ website. The Materials may be viewed, downloaded, and printed for non-commercial use only, without, inter alia, any right to sell, resell, redistribute or create derivative works therefrom. At all times the User shall credit the DTM as the source, unless otherwise stated. The user must include the URL of the Materials from the HDX Website, as well as the following credit line: Source: \"International Organization for Migration (IOM), Displacement Tracking Matrix (DTM)\"."
       filename: "hdx_hapi_idps"
     hxltags:
       location_code: "#country+code"
@@ -39,7 +39,7 @@ subcategories:
       - "refugees"
     resource:
       name: "Refugees Data for"
-      description: "Refugees and persons of concern data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#refugees-persons-of-concern) for more information  \n Source: [UNHCR](https://data.humdata.org/organization/unhcr)  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
+      description: "Refugees and Persons of Concern data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#refugees-persons-of-concern) for more information  \n Source: [UNHCR](https://data.humdata.org/organization/unhcr)  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
       filename: "hdx_hapi_refugees"
     hxltags:
       origin_location_code: "#country+code+origin"

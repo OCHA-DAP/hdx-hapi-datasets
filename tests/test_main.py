@@ -107,7 +107,7 @@ class TestHAPIPipelineHNO:
                     configuration,
                     database,
                 )
-                for countryiso3 in subcategory_reader.get_all_countries():
+                for countryiso3 in subcategory_reader.read_countries():
                     country_dataset = CountryDataset(
                         tempdir, configuration, countryiso3
                     )

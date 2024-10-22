@@ -187,7 +187,7 @@ requests-file==2.1.0
     # via hdx-python-utilities
 rfc3986==2.0.0
     # via frictionless
-rich==13.9.2
+rich==13.9.3
     # via typer
 rpds-py==0.20.0
     # via

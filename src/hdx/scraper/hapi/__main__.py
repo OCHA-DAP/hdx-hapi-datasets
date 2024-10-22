@@ -15,6 +15,7 @@ from hdx.database.dburi import (
 )
 from hdx.database.postgresql import PostgresError
 from hdx.facades.keyword_arguments import facade
+from hdx.scraper.hapi.datasets import Datasets
 from hdx.utilities.dictandlist import args_to_dict
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import (
@@ -24,7 +25,6 @@ from hdx.utilities.path import (
 from hdx.utilities.retriever import Retrieve
 
 from ._version import __version__
-from .country_dataset import CountryDataset
 from .subcategory_reader import SubcategoryReader
 
 logger = logging.getLogger(__name__)
@@ -129,15 +129,29 @@ def main(
                     configuration,
                     database,
                 )
-                for countryiso3 in subcategory_reader.get_all_countries():
-                    country_dataset = CountryDataset(
-                        folder, configuration, countryiso3
+                countryiso3s = subcategory_reader.read_countries()
+                datasets = Datasets(folder, configuration, countryiso3s)
+                for subcategory in subcategories:
+                    subcategory_reader.get_subcategory(subcategory, datasets)
+                    subcategory_dataset = datasets.get_subcategory_dataset(
+                        subcategory
                     )
-                    for _, subcategory_info in subcategories.items():
-                        subcategory_reader.view_by_location(
-                            country_dataset, subcategory_info, countryiso3
+                    dataset = subcategory_dataset.get_dataset()
+                    if dataset:
+                        dataset.update_from_yaml(
+                            script_dir_plus_file(
+                                join("config", "hdx_dataset_static.yaml"),
+                                main,
+                            )
                         )
-
+                        dataset.create_in_hdx(
+                            remove_additional_resources=True,
+                            hxl_update=False,
+                            updated_by_script=updated_by_script,
+                            batch=batch,
+                        )
+                for countryiso3 in countryiso3s:
+                    country_dataset = datasets.get_country_dataset(countryiso3)
                     dataset = country_dataset.get_dataset()
                     if dataset:
                         dataset.update_from_yaml(
@@ -152,7 +166,6 @@ def main(
                             updated_by_script=updated_by_script,
                             batch=batch,
                         )
-
             finally:
                 database.cleanup()
     logger.info("HDX HAPI datasets completed!")
@@ -167,6 +180,7 @@ if __name__ == "__main__":
         db_uri = f"postgresql://{db_uri}"
     facade(
         main,
+        hdx_site="feature",
         user_agent_config_yaml=join(expanduser("~"), ".useragents.yaml"),
         user_agent_lookup=lookup,
         project_config_yaml=script_dir_plus_file(

@@ -1,16 +1,15 @@
 default_db_uri: "postgresql+psycopg://postgres:postgres@localhost:5432/hapirestore"
 
 dataset:
-  title: "HDX HAPI data for"
+  title: "HDX HAPI data"
   name: "hdx-hapi-"
 
 subcategories:
   funding:
-    view: "funding"
     tags:
       - "funding"
     resource:
-      name: "Funding Data for"
+      name: "Funding Data"
       description: "Curated Funding Data with HXL hashtags"
       filename: "hdx_hapi_funding"
     hxltags:
@@ -27,11 +26,10 @@ subcategories:
       reference_period_end: "#date+end"
 
   population:
-    view: "population"
     tags:
       - "baseline population"
     resource:
-      name: "Population Data for"
+      name: "Population Data"
       description: "Curated Population Data with HXL hashtags"
       filename: "hdx_hapi_population"
     hxltags:
@@ -53,12 +51,11 @@ subcategories:
       reference_period_end: "#date+end"
 
   humanitarian_needs:
-    view: "humanitarian_needs"
     tags:
       - "humanitarian needs overview-hno"
       - "people in need-pin"
     resource:
-      name: "Humanitarian Needs Data for"
+      name: "Humanitarian Needs Data"
       description: "Curated Humanitarian Needs Data with HXL hashtags"
       filename: "hdx_hapi_humanitarian_needs"
     hxltags:
@@ -80,12 +77,11 @@ subcategories:
       reference_period_end: "#date+end"
 
   operational_presence:
-    view: "operational_presence"
     tags:
       - "operational presence"
       - "who is doing what and where-3w-4w-5w"
     resource:
-      name: "Operational Presence Data for"
+      name: "Operational Presence Data"
       description: "Curated Operational Presence Data with HXL hashtags"
       filename: "hdx_hapi_operational_presence"
     hxltags:
@@ -107,13 +103,12 @@ subcategories:
       reference_period_end: "#date+end"
 
   food_price:
-    view: "food_price"
     tags:
       - "economics"
       - "markets"
       - "food security"
     resource:
-      name: "Food Price Data for"
+      name: "Food Price Data"
       description: "Curated Food Price Data with HXL hashtags"
       filename: "hdx_hapi_food_price"
     hxltags:
@@ -140,11 +135,10 @@ subcategories:
       reference_period_end: "#date+end"
 
   food_security:
-    view: "food_security"
     tags:
       - "food security"
     resource:
-      name: "Food Security Data for"
+      name: "Food Security Data"
       description: "Curated Food Security Data with HXL hashtags"
       filename: "hdx_hapi_food_security"
     hxltags:
@@ -165,11 +159,10 @@ subcategories:
       reference_period_end: "#date+end"
 
   conflict_event:
-    view: "conflict_event"
     tags:
       - "conflict-violence"
     resource:
-      name: "Conflict Event Data for"
+      name: "Conflict Event Data"
       description: "Curated Conflict Event Data with HXL hashtags"
       filename: "hdx_hapi_conflict_event"
     hxltags:
@@ -189,13 +182,12 @@ subcategories:
       reference_period_end: "#date+end"
 
   idps:
-    view: "idps"
     tags:
       - "displacement"
       - "internally displaced persons-idp"
       - "migration"
     resource:
-      name: "IDPs Data for"
+      name: "IDPs Data"
       description: "Curated IDPs Data with HXL hashtags"
       filename: "hdx_hapi_idps"
     hxltags:
@@ -216,11 +208,10 @@ subcategories:
       reference_period_end: "#date+end"
 
   national_risk:
-    view: "national_risk"
     tags:
       - "hazards and risk"
     resource:
-      name: "National Risk Data for"
+      name: "National Risk Data"
       description: "Curated National Risk Data with HXL hashtags"
       filename: "hdx_hapi_national_risk"
     hxltags:
@@ -239,11 +230,10 @@ subcategories:
       reference_period_end: "#date+end"
 
   refugees:
-    view: "refugees"
     tags:
       - "refugees"
     resource:
-      name: "Refugees Data for"
+      name: "Refugees Data"
       description: "Curated Refugees Data with HXL hashtags"
       filename: "hdx_hapi_refugees"
     hxltags:
@@ -263,11 +253,10 @@ subcategories:
       reference_period_end: "#date+end"
 
   returnees:
-    view: "returnees"
     tags:
       - "returnees"
     resource:
-      name: "Returnees Data for"
+      name: "Returnees Data"
       description: "Curated Returnees Data with HXL hashtags"
       filename: "hdx_hapi_returnees"
     hxltags:
@@ -287,14 +276,13 @@ subcategories:
       reference_period_end: "#date+end"
 
   poverty_rate:
-    view: "poverty_rate"
     tags:
       - "education"
       - "health"
       - "indicators"
       - "poverty"
     resource:
-      name: "Poverty Rate Data for"
+      name: "Poverty Rate Data"
       description: "Curated Poverty Rate with HXL hashtags"
       filename: "hdx_hapi_poverty_rate"
     hxltags:
@@ -313,10 +301,9 @@ subcategories:
       reference_period_end: "#date+end"
 
   data_availability:
-    view: "data_availability"
     tags: []
     resource:
-      name: "Data Availability Data for"
+      name: "Data Availability Data"
       description: "Data Availability Data with HXL hashtags"
       filename: "hdx_hapi_data_availability"
     hxltags:

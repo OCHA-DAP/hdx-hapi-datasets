@@ -16,7 +16,9 @@ subcategories:
       name: "IDPs Data for"
       description: "IDPs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons) for more information
 
+
       Source: International Organization for Migration (IOM)
+
 
       License: Copyright © International Organization for Migration 2018 IOM reserves the right to assert ownership of the Materials collected on the https://data.humdata.org/ website. The Materials may be viewed, downloaded, and printed for non-commercial use only, without, inter alia, any right to sell, resell, redistribute or create derivative works therefrom. At all times the User shall credit the DTM as the source, unless otherwise stated. The user must include the URL of the Materials from the HDX Website, as well as the following credit line: Source: \"International Organization for Migration (IOM), Displacement Tracking Matrix (DTM)\"."
       filename: "hdx_hapi_idps"
@@ -43,11 +45,7 @@ subcategories:
       - "refugees"
     resource:
       name: "Refugees Data for"
-      description: "Refugees and persons of concern data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#refugees-persons-of-concern) for more information
-
-      Source: [UNHCR](https://data.humdata.org/organization/unhcr)
-
-      License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
+      description: "Refugees and persons of concern data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#refugees-persons-of-concern) for more information  \n Source: [UNHCR](https://data.humdata.org/organization/unhcr)  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
       filename: "hdx_hapi_refugees"
     hxltags:
       origin_location_code: "#country+code+origin"
@@ -133,7 +131,7 @@ subcategories:
       name: "Operational Presence Data for"
       description: "Who is doing What Where - Operational Presence data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#who-is-doing-what-where-operational-presence) for more information
 
-      Source: [OCHA Lebanon](https://data.humdata.org/organization/a5d3183c-aa19-4320-be20-afb8eeb23ba9
+      Source: [OCHA Lebanon](https://data.humdata.org/organization/a5d3183c-aa19-4320-be20-afb8eeb23ba9)
 
       License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
       filename: "hdx_hapi_operational_presence"
@@ -302,7 +300,7 @@ subcategories:
       - "baseline population"
     resource:
       name: "Population Data for"
-      description: "Curated Population Data with HXL hashtags"
+      description: TODO
       filename: "hdx_hapi_population"
     hxltags:
       location_code: "#country+code"
@@ -331,7 +329,10 @@ subcategories:
       - "poverty"
     resource:
       name: "Poverty Rate Data for"
-      description: "Curated Poverty Rate with HXL hashtags"
+      description: >
+        Poverty Rate data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/population_and_socio-economy/#poverty-rate)
+        Source: [Oxford Poverty & Human Development Initiative](https://data.humdata.org/organization/00547685-9ded-4d69-9ca5-47d5278ead7c)
+        License: [Public Domain / No Restrictions](https://data.humdata.org/faqs/licenses)
       filename: "hdx_hapi_poverty_rate"
     hxltags:
       location_code: "#country+code"
@@ -353,7 +354,7 @@ subcategories:
     tags: []
     resource:
       name: "Data Availability Data for"
-      description: "Data Availability Data with HXL hashtags"
+      description: "Data Availability Data"
       filename: "hdx_hapi_data_availability"
     hxltags:
       category: "#category"

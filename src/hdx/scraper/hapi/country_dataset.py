@@ -14,7 +14,9 @@ class CountryDataset(BaseDataset):
     ) -> None:
         self.countryiso3 = countryiso3
         countryname = Country.get_country_name_from_iso3(countryiso3)
-        super().__init__(folder, configuration, countryname)
+        super().__init__(
+            folder, configuration, f"for {countryname}", countryiso3
+        )
         self.dataset.add_country_location(countryiso3)
         self.dataset.set_subnational(True)
 
@@ -25,7 +27,7 @@ class CountryDataset(BaseDataset):
         rows: List[Dict],
     ) -> bool:
         resource_name = resource_info["name"]
-        resource_name = f"{resource_name} for {self.what}"
+        resource_name = f"{resource_name} {self.title_suffix}"
         resource_description = resource_info["description"]
         filename = resource_info["filename"]
         filename = f"{filename}_{self.countryiso3.lower()}.csv"

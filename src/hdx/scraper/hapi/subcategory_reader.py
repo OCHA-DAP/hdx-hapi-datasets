@@ -83,11 +83,23 @@ class SubcategoryReader:
         rows_by_countryiso3 = {}
         for result in results:
             index = headers_to_index.get("location_code")
-            countryiso3 = result[index]
-            if countryiso3 in self.countryiso3s:
-                country_dataset = datasets.get_country_dataset(countryiso3)
+            if index is None:
+                index_origin = headers_to_index.get("origin_location_code")
+                countryiso3_origin = result[index_origin]
+                index_asylum = headers_to_index.get("asylum_location_code")
+                countryiso3_asylum = result[index_asylum]
+                if countryiso3_origin == countryiso3_asylum:
+                    countryiso3s = [countryiso3_origin]
+                else:
+                    countryiso3s = [countryiso3_origin, countryiso3_asylum]
             else:
-                country_dataset = None
+                countryiso3s = [result[index]]
+            country_datasets = []
+            for countryiso3 in countryiso3s:
+                if countryiso3 in self.countryiso3s:
+                    country_datasets.append(
+                        datasets.get_country_dataset(countryiso3)
+                    )
             index = headers_to_index.get("resource_hdx_id")
             if index is not None:
                 resource_hdx_id = result[index]
@@ -95,7 +107,7 @@ class SubcategoryReader:
                     self.resource_hdx_id_to_hdx_provider_name[resource_hdx_id]
                 )
                 subcategory_dataset.add_sources(dataset_provider_name)
-                if country_dataset:
+                for country_dataset in country_datasets:
                     country_dataset.add_sources(dataset_provider_name)
             hxltags = subcategory_info["hxltags"]
             row = {}
@@ -103,18 +115,18 @@ class SubcategoryReader:
                 value = result[headers_to_index[header]]
                 if hxltag == "#date+start":
                     subcategory_dataset.update_start_date(value)
-                    if country_dataset:
+                    for country_dataset in country_datasets:
                         country_dataset.update_start_date(value)
                     value = iso_string_from_datetime(value)
                 elif hxltag == "#date+end":
                     subcategory_dataset.update_end_date(value)
-                    if country_dataset:
+                    for country_dataset in country_datasets:
                         country_dataset.update_end_date(value)
                     value = iso_string_from_datetime(value)
                 row[header] = str(value)
             rows.append(row)
-            subcategory_dataset.add_country(countryiso3)
-            if country_dataset:
+            for countryiso3 in countryiso3s:
+                subcategory_dataset.add_country(countryiso3)
                 dict_of_lists_add(rows_by_countryiso3, countryiso3, row)
         success = self.add_resource(
             subcategory_info, subcategory_dataset, rows

@@ -14,23 +14,28 @@ logger = logging.getLogger(__name__)
 
 class BaseDataset(ABC):
     def __init__(
-        self, folder: str, configuration: Configuration, what: str
+        self,
+        folder: str,
+        configuration: Configuration,
+        title_suffix: str,
+        name_suffix: str,
     ) -> None:
         self.folder = folder
         self.configuration = configuration["dataset"]
-        self.what = what
-        self.dataset = self.create_dataset(what)
+        self.title_suffix = title_suffix
+        self.name_suffix = name_suffix
+        self.dataset = self.create_dataset(title_suffix, name_suffix)
         self.tags = {"hxl"}
         self.start_date = default_enddate
         self.end_date = default_date
         self.sources = set()
 
-    def create_dataset(self, what: str) -> Dataset:
+    def create_dataset(self, title_suffix: str, name_suffix: str) -> Dataset:
         title = self.configuration["title"]
-        title = f"{title} {what}"
+        title = f"{title} {title_suffix}"
         logger.info(f"Creating dataset: {title}")
         name = self.configuration["name"]
-        name = f"{name}-{what}"
+        name = f"{name}-{name_suffix}"
         slugified_name = slugify(name).lower()
         dataset = Dataset(
             {

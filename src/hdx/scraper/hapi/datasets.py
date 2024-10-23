@@ -1,10 +1,6 @@
-from os.path import join
-from typing import Dict, List
+from typing import List
 
 from hdx.api.configuration import Configuration
-from hdx.utilities.path import script_dir_plus_file
-
-from hdx.scraper.hapi.base_dataset import BaseDataset
 from hdx.scraper.hapi.country_dataset import CountryDataset
 from hdx.scraper.hapi.subcategory_dataset import SubcategoryDataset
 

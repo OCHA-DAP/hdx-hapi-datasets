@@ -15,7 +15,7 @@ class SubcategoryDataset(BaseDataset):
         configuration: Configuration,
         subcategory: str,
     ) -> None:
-        super().__init__(folder, configuration, subcategory)
+        super().__init__(folder, configuration, subcategory, subcategory)
         self.dataset.set_subnational(True)  # check
         self.countries = set()
 

@@ -22,6 +22,7 @@ class CountryDataset(BaseDataset):
         self.dataset.add_country_location(countryiso3)
         self.dataset.set_subnational(True)
         self.site_url = configuration.get_hdx_site_url()
+        self.multiple_licenses = configuration["country_multiple_licenses"]
 
     def add_resource(
         self,

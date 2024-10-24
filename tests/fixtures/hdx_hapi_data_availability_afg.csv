@@ -1,14 +1,14 @@
-category,subcategory,location_code,admin1_code,admin1_name,admin2_code,admin2_name
-#category,#subcategory,#country+code,#adm1+code,#adm1+name,#adm2+code,#adm2+name
-coordination-context,conflict-event,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2
-affected-people,humanitarian-needs,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2
-coordination-context,operational-presence,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2
-coordination-context,funding,AFG,,,,
-food,food-price,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2
-population-social,poverty-rate,AFG,AB01,AB01 adm1,,
-affected-people,returnees,AFG,,,,
-food,food-security,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2
-affected-people,idps,AFG,AB01,AB01 adm1,AB01-XXX,Unspecified
-coordination-context,national-risk,AFG,,,,
-population-social,population,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2
-affected-people,refugees,AFG,,,,
+category,subcategory,location_code,admin1_code,admin1_name,admin2_code,admin2_name,hapi_updated_date
+#category,#subcategory,#country+code,#adm1+code,#adm1+name,#adm2+code,#adm2+name,#date+updated
+coordination-context,conflict-event,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2024-10-15
+affected-people,humanitarian-needs,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2024-10-15
+coordination-context,operational-presence,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2024-10-15
+coordination-context,funding,AFG,,,,,2024-10-15
+food,food-price,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2024-10-16
+population-social,poverty-rate,AFG,AB01,AB01 adm1,,,2024-10-16
+affected-people,returnees,AFG,,,,,2024-10-15
+food,food-security,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2024-10-15
+affected-people,idps,AFG,AB01,AB01 adm1,AB01-XXX,Unspecified,2024-10-15
+coordination-context,national-risk,AFG,,,,,2024-10-15
+population-social,population,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2024-10-15
+affected-people,refugees,AFG,,,,,2024-10-15

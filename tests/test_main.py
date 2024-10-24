@@ -40,6 +40,7 @@ class TestHAPIPipelineHNO:
         Locations.set_validlocations(
             [
                 {"name": "AFG", "title": "Afghanistan"},
+                {"name": "SDN", "title": "Sudan"},
             ]
         )
         Vocabulary._approved_vocabulary = {
@@ -78,9 +79,13 @@ class TestHAPIPipelineHNO:
     def fixtures_dir(self):
         return join("tests", "fixtures")
 
+    @pytest.fixture(scope="class")
+    def input_dir(self, fixtures_dir):
+        return join(fixtures_dir, "input")
+
     @pytest.fixture(scope="function")
-    def input_database(self, fixtures_dir):
-        return join(fixtures_dir, "hapi_db.pg_restore")
+    def input_database(self, input_dir):
+        return join(input_dir, "hapi_db.pg_restore")
 
     @pytest.fixture(scope="function")
     def db_uri(self):
@@ -90,6 +95,7 @@ class TestHAPIPipelineHNO:
         self,
         configuration,
         fixtures_dir,
+        input_dir,
         input_database,
         db_uri,
     ):
@@ -100,7 +106,7 @@ class TestHAPIPipelineHNO:
         ) as temp_folder:
             Read.create_readers(
                 temp_folder,
-                fixtures_dir,
+                input_dir,
                 temp_folder,
                 False,
                 True,
@@ -144,15 +150,14 @@ class TestHAPIPipelineHNO:
                     expected_file = join(fixtures_dir, filename)
                     actual_file = join(temp_folder, filename)
                     assert_files_same(expected_file, actual_file)
-                for countryiso3 in countryiso3s:
-                    country_dataset = datasets.get_country_dataset(countryiso3)
-                    dataset = country_dataset.get_dataset()
-                    assert dataset == result_country_dataset
-                    assert dataset.get_resources() == result_country_resources
-                    for subcategory in subcategories:
-                        filename = f"hdx_hapi_{subcategory}_afg.csv"
-                        expected_file = join(fixtures_dir, filename)
-                        actual_file = join(temp_folder, filename)
-                        assert_files_same(expected_file, actual_file)
+                country_dataset = datasets.get_country_dataset("AFG")
+                dataset = country_dataset.get_dataset()
+                assert dataset == result_country_dataset
+                assert dataset.get_resources() == result_country_resources
+                for subcategory in subcategories:
+                    filename = f"hdx_hapi_{subcategory}_afg.csv"
+                    expected_file = join(fixtures_dir, filename)
+                    actual_file = join(temp_folder, filename)
+                    assert_files_same(expected_file, actual_file)
             finally:
                 database.cleanup()

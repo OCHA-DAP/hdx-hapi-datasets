@@ -83,7 +83,7 @@ results_subcategory_datasets = {
         "owner_org": "hdx",
         "data_update_frequency": "1",
         "subnational": "1",
-        "groups": [{"name": "afg"}],
+        "groups": [{"name": "afg"}, {"name": "sdn"}],
         "tags": [
             {
                 "name": "humanitarian needs overview-hno",
@@ -98,10 +98,10 @@ results_subcategory_datasets = {
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
         ],
-        "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
-        "dataset_source": "Test Provider",
+        "dataset_date": "[2023-11-04T00:00:00 TO 2024-12-31T23:59:59]",
+        "dataset_source": "Test Provider, Test Provider 2",
         "license_id": "hdx-other",
-        "license_other": "mylicense",
+        "license_other": "[Creative Commons Attribution for Intergovernmental Organisations](http://creativecommons.org/licenses/by/3.0/igo/legalcode)  \nmylicense",
     },
     "operational_presence": {
         "name": "hdx-hapi-operational-presence",
@@ -316,14 +316,14 @@ results_subcategory_datasets = {
         "owner_org": "hdx",
         "data_update_frequency": "1",
         "subnational": "1",
-        "groups": [{"name": "afg"}],
+        "groups": [{"name": "afg"}, {"name": "sdn"}],
         "tags": [
             {
                 "name": "hxl",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             }
         ],
-        "dataset_date": "[9990-12-31T00:00:00 TO 0001-01-01T23:59:59]",
+        "dataset_date": "[2024-10-15T00:00:00 TO 2024-10-16T23:59:59]",
         "dataset_source": "HDX HAPI",
         "license_id": "cc-by-igo",
     },

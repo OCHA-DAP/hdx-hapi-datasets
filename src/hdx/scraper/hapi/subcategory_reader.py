@@ -151,6 +151,11 @@ class SubcategoryReader:
                     for country_dataset in country_datasets:
                         country_dataset.update_end_date(value)
                     value = iso_string_from_datetime(value)
+                elif hxltag == "#date+updated":
+                    # data availability table only has an update date
+                    subcategory_dataset.update_start_date(value)
+                    subcategory_dataset.update_end_date(value)
+                    value = iso_string_from_datetime(value)
                 row[header] = str(value)
             rows.append(row)
             for countryiso3 in countryiso3s:

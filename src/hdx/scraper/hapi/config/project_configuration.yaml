@@ -4,7 +4,7 @@ country_dataset_title: "HDX HAPI data for {suffix}"
 dataset_name: "hdx-hapi-{suffix}"
 default_source: "HDX HAPI"
 default_license: "cc-by-igo"
-multiple_licenses: "Multiple licenses, please see individual resources for specific license information"
+country_multiple_licenses: "Multiple licenses, please see individual resources for specific license information"
 
 subcategories:
   idps:
@@ -350,3 +350,4 @@ subcategories:
       admin1_name: "#adm1+name"
       admin2_code: "#adm2+code"
       admin2_name: "#adm2+name"
+      hapi_updated_date: "#date+updated"

@@ -29,6 +29,7 @@ class BaseDataset(ABC):
         self.end_date = default_date
         self.sources = {}
         self.licenses = {}
+        self.multiple_licenses = None
 
     @staticmethod
     def create_dataset(title: str, name: str) -> Dataset:
@@ -96,9 +97,23 @@ class BaseDataset(ABC):
                     self.dataset["license_other"] = license_description
             case _:
                 self.dataset["license_id"] = "hdx-other"
-                self.dataset["license_other"] = self.configuration[
-                    "multiple_licenses"
-                ]
+                if self.multiple_licenses:
+                    licenses = [self.multiple_licenses]
+                else:
+                    licenses = []
+                    for (
+                        license_id,
+                        license_title,
+                        license_url,
+                        license_description,
+                    ) in sorted(all_licenses):
+                        if license_id == "hdx-other":
+                            licenses.append(f"{license_description}")
+                        else:
+                            licenses.append(
+                                f"[{license_title}]({license_url})"
+                            )
+                self.dataset["license_other"] = "  \n".join(licenses)
         return self.dataset
 
     def _add_resource(

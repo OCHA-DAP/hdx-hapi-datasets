@@ -10,6 +10,7 @@ from hdx.data.vocabulary import Vocabulary
 from hdx.database import Database
 from hdx.database.dburi import get_params_from_connection_uri
 from hdx.database.postgresql import PostgresError
+from hdx.scraper.framework.utilities.reader import Read
 from hdx.scraper.hapi.datasets import Datasets
 from hdx.scraper.hapi.subcategory_reader import SubcategoryReader
 from hdx.utilities.compare import assert_files_same
@@ -96,7 +97,14 @@ class TestHAPIPipelineHNO:
             "TestHAPIDatasets",
             delete_on_success=True,
             delete_on_failure=False,
-        ) as tempdir:
+        ) as temp_folder:
+            Read.create_readers(
+                temp_folder,
+                fixtures_dir,
+                temp_folder,
+                False,
+                True,
+            )
             params = get_params_from_connection_uri(db_uri)
             params["pg_restore_file"] = input_database
             params["prepare_fn"] = prepare_hapi_views
@@ -114,13 +122,19 @@ class TestHAPIPipelineHNO:
                     database,
                 )
                 countryiso3s = subcategory_reader.read_countries()
-                datasets = Datasets(tempdir, configuration, countryiso3s)
+                datasets = Datasets(temp_folder, configuration, countryiso3s)
+                # Generate test subcategory results by uncommenting the
+                # commented lines. You will need to comment the asserts.
+                # ds = {}
+                # dsr = {}
                 for subcategory in subcategories:
                     subcategory_reader.get_subcategory(subcategory, datasets)
                     subcategory_dataset = datasets.get_subcategory_dataset(
                         subcategory
                     )
                     dataset = subcategory_dataset.get_dataset()
+                    # ds[subcategory] = dataset
+                    # dsr[subcategory] = dataset.get_resources()
                     assert dataset == results_subcategory_datasets[subcategory]
                     assert (
                         dataset.get_resources()
@@ -128,7 +142,7 @@ class TestHAPIPipelineHNO:
                     )
                     filename = f"hdx_hapi_{subcategory}_global.csv"
                     expected_file = join(fixtures_dir, filename)
-                    actual_file = join(tempdir, filename)
+                    actual_file = join(temp_folder, filename)
                     assert_files_same(expected_file, actual_file)
                 for countryiso3 in countryiso3s:
                     country_dataset = datasets.get_country_dataset(countryiso3)
@@ -138,7 +152,7 @@ class TestHAPIPipelineHNO:
                     for subcategory in subcategories:
                         filename = f"hdx_hapi_{subcategory}_afg.csv"
                         expected_file = join(fixtures_dir, filename)
-                        actual_file = join(tempdir, filename)
+                        actual_file = join(temp_folder, filename)
                         assert_files_same(expected_file, actual_file)
             finally:
                 database.cleanup()

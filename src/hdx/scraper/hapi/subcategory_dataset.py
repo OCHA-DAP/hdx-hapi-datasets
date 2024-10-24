@@ -15,8 +15,21 @@ class SubcategoryDataset(BaseDataset):
         configuration: Configuration,
         subcategory: str,
     ) -> None:
-        super().__init__(folder, configuration, subcategory, subcategory)
-        self.dataset.set_subnational(True)  # check
+        subcategory_config = configuration["subcategories"][subcategory]
+        title = subcategory_config["title"]
+        name = configuration["dataset_name"].format(suffix=subcategory)
+        super().__init__(folder, configuration, title, name)
+        subnational = False
+        for hxltag in subcategory_config["hxltags"]:
+            if hxltag in (
+                "provider_admin1_name",
+                "provider_admin2_name",
+                "admin1_code",
+                "admin2_code",
+            ):
+                subnational = True
+                break
+        self.dataset.set_subnational(subnational)
         self.countries = set()
 
     def add_country(self, countryiso3: str) -> None:
@@ -28,15 +41,17 @@ class SubcategoryDataset(BaseDataset):
 
     def add_resource(
         self,
-        resource_info: Dict,
-        hxltags: Dict,
+        subcategory: str,
+        subcategory_info: Dict,
         rows: List[Dict],
     ) -> bool:
+        resource_info = subcategory_info["resource"]
         resource_name = resource_info["name"]
         resource_name = f"Global {resource_name}"
         resource_description = resource_info["description"]
         filename = resource_info["filename"]
         filename = f"{filename}_global.csv"
+        hxltags = subcategory_info["hxltags"]
         return self._add_resource(
             resource_name, resource_description, filename, hxltags, rows
         )

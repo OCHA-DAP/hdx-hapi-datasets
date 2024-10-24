@@ -1,11 +1,12 @@
 import logging
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 from sqlalchemy import select
 
 from hdx.api.configuration import Configuration
 from hdx.database import Database
 from hdx.location.country import Country
+from hdx.scraper.framework.utilities.reader import Read
 from hdx.utilities.dateparse import (
     iso_string_from_datetime,
 )
@@ -26,20 +27,42 @@ class SubcategoryReader:
         self.configuration = configuration
         self.session = database.get_session()
         self.views = database.get_prepare_results()
-        self.resource_hdx_id_to_hdx_provider_name = (
-            self.get_resource_hdx_id_to_hdx_provider_name_mapping()
-        )
+        (
+            self.resource_hdx_id_to_hdx_provider,
+            self.resource_hdx_id_to_license,
+        ) = self.get_mappings()
         self.countryiso3s = self.read_countries()
 
-    def get_resource_hdx_id_to_hdx_provider_name_mapping(self) -> Dict:
+    def get_mappings(self) -> Tuple[Dict, Dict]:
         view = self.views["resource"]
         results = self.session.execute(
-            select(view.c.hdx_id, view.c.dataset_hdx_provider_name)
+            select(
+                view.c.hdx_id,
+                view.c.dataset_hdx_id,
+                view.c.dataset_hdx_provider_stub,
+                view.c.dataset_hdx_provider_name,
+            )
         ).all()
-        return {
-            hdx_id: dataset_hdx_provider_name
-            for hdx_id, dataset_hdx_provider_name in results
-        }
+        resource_hdx_id_to_hdx_provider = {}
+        resource_hdx_id_to_license = {}
+        for (
+            hdx_id,
+            dataset_hdx_id,
+            hdx_provider_stub,
+            hdx_provider_name,
+        ) in results:
+            resource_hdx_id_to_hdx_provider[hdx_id] = (
+                hdx_provider_stub,
+                hdx_provider_name,
+            )
+            dataset = Read.get_reader("hdx").read_dataset(dataset_hdx_id)
+            license_id = dataset["license_id"]
+            title = dataset.get("license_title")
+            url = dataset.get("license_url")
+            description = dataset.get("license_other")
+            license = (license_id, title, url, description)
+            resource_hdx_id_to_license[hdx_id] = license
+        return resource_hdx_id_to_hdx_provider, resource_hdx_id_to_license
 
     def read_countries(self) -> List[str]:
         view = self.views["data_availability"]
@@ -55,15 +78,16 @@ class SubcategoryReader:
 
     @staticmethod
     def add_resource(
-        subcategory_info: Dict, dataset: BaseDataset, rows: List[Dict]
+        subcategory: str,
+        subcategory_info: Dict,
+        dataset: BaseDataset,
+        rows: List[Dict],
     ) -> bool:
         if len(rows) == 0:
             return False
-        resource_info = subcategory_info["resource"]
         tags = subcategory_info["tags"]
         dataset.add_tags(tags)
-        hxltags = subcategory_info["hxltags"]
-        return dataset.add_resource(resource_info, hxltags, rows)
+        return dataset.add_resource(subcategory, subcategory_info, rows)
 
     def get_countries(self) -> List[str]:
         return self.countryiso3s
@@ -100,15 +124,19 @@ class SubcategoryReader:
                     country_datasets.append(
                         datasets.get_country_dataset(countryiso3)
                     )
+
             index = headers_to_index.get("resource_hdx_id")
             if index is not None:
                 resource_hdx_id = result[index]
-                dataset_provider_name = (
-                    self.resource_hdx_id_to_hdx_provider_name[resource_hdx_id]
-                )
-                subcategory_dataset.add_sources(dataset_provider_name)
+                hdx_provider = self.resource_hdx_id_to_hdx_provider[
+                    resource_hdx_id
+                ]
+                license = self.resource_hdx_id_to_license[resource_hdx_id]
+                subcategory_dataset.add_source(subcategory, hdx_provider)
+                subcategory_dataset.add_license(subcategory, license)
                 for country_dataset in country_datasets:
-                    country_dataset.add_sources(dataset_provider_name)
+                    country_dataset.add_source(subcategory, hdx_provider)
+                    country_dataset.add_license(subcategory, license)
             hxltags = subcategory_info["hxltags"]
             row = {}
             for header, hxltag in hxltags.items():
@@ -127,16 +155,19 @@ class SubcategoryReader:
             rows.append(row)
             for countryiso3 in countryiso3s:
                 subcategory_dataset.add_country(countryiso3)
+                if countryiso3 not in self.countryiso3s:
+                    continue
                 dict_of_lists_add(rows_by_countryiso3, countryiso3, row)
         success = self.add_resource(
-            subcategory_info, subcategory_dataset, rows
+            subcategory, subcategory_info, subcategory_dataset, rows
         )
         if not success:
             return False
         for countryiso3, country_rows in rows_by_countryiso3.items():
             country_dataset = datasets.get_country_dataset(countryiso3)
+            subcategory_info["subcategory"] = subcategory
             success = self.add_resource(
-                subcategory_info, country_dataset, country_rows
+                subcategory, subcategory_info, country_dataset, country_rows
             )
             if not success:
                 return False

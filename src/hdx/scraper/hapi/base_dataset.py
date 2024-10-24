@@ -1,13 +1,14 @@
 import logging
 from abc import ABC, abstractmethod
 from datetime import datetime
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 from slugify import slugify
 
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
 from hdx.utilities.dateparse import default_date, default_enddate
+from hdx.utilities.dictandlist import dict_of_sets_add
 
 logger = logging.getLogger(__name__)
 
@@ -17,25 +18,21 @@ class BaseDataset(ABC):
         self,
         folder: str,
         configuration: Configuration,
-        title_suffix: str,
-        name_suffix: str,
+        title: str,
+        name: str,
     ) -> None:
         self.folder = folder
-        self.configuration = configuration["dataset"]
-        self.title_suffix = title_suffix
-        self.name_suffix = name_suffix
-        self.dataset = self.create_dataset(title_suffix, name_suffix)
+        self.configuration = configuration
+        self.dataset = self.create_dataset(title, name)
         self.tags = {"hxl"}
         self.start_date = default_enddate
         self.end_date = default_date
-        self.sources = set()
+        self.sources = {}
+        self.licenses = {}
 
-    def create_dataset(self, title_suffix: str, name_suffix: str) -> Dataset:
-        title = self.configuration["title"]
-        title = f"{title} {title_suffix}"
+    @staticmethod
+    def create_dataset(title: str, name: str) -> Dataset:
         logger.info(f"Creating dataset: {title}")
-        name = self.configuration["name"]
-        name = f"{name}-{name_suffix}"
         slugified_name = slugify(name).lower()
         dataset = Dataset(
             {
@@ -59,15 +56,49 @@ class BaseDataset(ABC):
     def add_tags(self, tags: List[str]) -> None:
         self.tags.update(tags)
 
-    def add_sources(self, sources: List[str]) -> None:
-        self.sources.add(sources)
+    def add_source(self, subcategory: str, source: Tuple[str, str]) -> None:
+        dict_of_sets_add(self.sources, subcategory, source)
+
+    def add_license(
+        self, subcategory: str, license: Tuple[str, str, str, str]
+    ) -> None:
+        dict_of_sets_add(self.licenses, subcategory, license)
 
     def get_dataset(self) -> Optional[Dataset]:
         if len(self.dataset.get_resources()) == 0:
             return None
         self.dataset.add_tags(sorted(self.tags))
         self.dataset.set_time_period(self.start_date, self.end_date)
-        self.dataset["dataset_source"] = ", ".join(sorted(self.sources))
+        all_sources = set()
+        for _, sources in self.sources.items():
+            for _, hdx_provider_name in sources:
+                all_sources.add(hdx_provider_name)
+        if len(all_sources) == 0:
+            all_sources.add(self.configuration["default_source"])
+        self.dataset["dataset_source"] = ", ".join(sorted(all_sources))
+        all_licenses = set()
+        for _, licenses in self.licenses.items():
+            all_licenses.update(licenses)
+        match len(all_licenses):
+            case 0:
+                self.dataset["license_id"] = self.configuration[
+                    "default_license"
+                ]
+            case 1:
+                (
+                    license_id,
+                    license_title,
+                    license_url,
+                    license_description,
+                ) = next(iter(all_licenses))
+                self.dataset["license_id"] = license_id
+                if license_id == "hdx-other":
+                    self.dataset["license_other"] = license_description
+            case _:
+                self.dataset["license_id"] = "hdx-other"
+                self.dataset["license_other"] = self.configuration[
+                    "multiple_licenses"
+                ]
         return self.dataset
 
     def _add_resource(
@@ -96,8 +127,8 @@ class BaseDataset(ABC):
     @abstractmethod
     def add_resource(
         self,
-        resource_info: Dict,
-        hxltags: Dict,
+        subcategory: str,
+        subcategory_info: Dict,
         rows: List[Dict],
     ) -> bool:
         pass

@@ -1,7 +1,7 @@
 results_subcategory_datasets = {
     "idps": {
         "name": "hdx-hapi-idps",
-        "title": "HDX HAPI data idps",
+        "title": "HDX HAPI Internally-Displaced Persons",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -27,14 +27,16 @@ results_subcategory_datasets = {
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider",
+        "license_id": "hdx-other",
+        "license_other": "mylicense",
     },
     "refugees": {
         "name": "hdx-hapi-refugees",
-        "title": "HDX HAPI data refugees",
+        "title": "HDX HAPI Refugees & Persons of Concern",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
-        "subnational": "1",
+        "subnational": "0",
         "groups": [{"name": "afg"}],
         "tags": [
             {
@@ -48,14 +50,16 @@ results_subcategory_datasets = {
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider",
+        "license_id": "hdx-other",
+        "license_other": "mylicense",
     },
     "returnees": {
         "name": "hdx-hapi-returnees",
-        "title": "HDX HAPI data returnees",
+        "title": "HDX HAPI Returnees",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
-        "subnational": "1",
+        "subnational": "0",
         "groups": [{"name": "afg"}],
         "tags": [
             {
@@ -69,10 +73,12 @@ results_subcategory_datasets = {
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider",
+        "license_id": "hdx-other",
+        "license_other": "mylicense",
     },
     "humanitarian_needs": {
         "name": "hdx-hapi-humanitarian-needs",
-        "title": "HDX HAPI data humanitarian_needs",
+        "title": "HDX HAPI Humanitarian Needs",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -94,10 +100,12 @@ results_subcategory_datasets = {
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider",
+        "license_id": "hdx-other",
+        "license_other": "mylicense",
     },
     "operational_presence": {
         "name": "hdx-hapi-operational-presence",
-        "title": "HDX HAPI data operational_presence",
+        "title": "HDX HAPI Who is Doing What Where - Operational Presence",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -119,14 +127,16 @@ results_subcategory_datasets = {
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider",
+        "license_id": "hdx-other",
+        "license_other": "mylicense",
     },
     "funding": {
         "name": "hdx-hapi-funding",
-        "title": "HDX HAPI data funding",
+        "title": "HDX HAPI Funding",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
-        "subnational": "1",
+        "subnational": "0",
         "groups": [{"name": "afg"}],
         "tags": [
             {
@@ -140,10 +150,12 @@ results_subcategory_datasets = {
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider",
+        "license_id": "hdx-other",
+        "license_other": "mylicense",
     },
     "conflict_event": {
         "name": "hdx-hapi-conflict-event",
-        "title": "HDX HAPI data conflict_event",
+        "title": "HDX HAPI Conflict Events",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -161,14 +173,16 @@ results_subcategory_datasets = {
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider",
+        "license_id": "hdx-other",
+        "license_other": "mylicense",
     },
     "national_risk": {
         "name": "hdx-hapi-national-risk",
-        "title": "HDX HAPI data national_risk",
+        "title": "HDX HAPI National Risk",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
-        "subnational": "1",
+        "subnational": "0",
         "groups": [{"name": "afg"}],
         "tags": [
             {
@@ -182,10 +196,12 @@ results_subcategory_datasets = {
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider",
+        "license_id": "hdx-other",
+        "license_other": "mylicense",
     },
     "food_security": {
         "name": "hdx-hapi-food-security",
-        "title": "HDX HAPI data food_security",
+        "title": "HDX HAPI Food Security",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -203,10 +219,12 @@ results_subcategory_datasets = {
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider",
+        "license_id": "hdx-other",
+        "license_other": "mylicense",
     },
     "food_price": {
         "name": "hdx-hapi-food-price",
-        "title": "HDX HAPI data food_price",
+        "title": "HDX HAPI Food Prices",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -231,11 +249,12 @@ results_subcategory_datasets = {
             },
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
-        "dataset_source": "Test Provider",
+        "dataset_source": "Test Provider 2",
+        "license_id": "cc-by-igo",
     },
     "population": {
         "name": "hdx-hapi-population",
-        "title": "HDX HAPI data population",
+        "title": "HDX HAPI Baseline Population",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -253,10 +272,12 @@ results_subcategory_datasets = {
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider",
+        "license_id": "hdx-other",
+        "license_other": "mylicense",
     },
     "poverty_rate": {
         "name": "hdx-hapi-poverty-rate",
-        "title": "HDX HAPI data poverty_rate",
+        "title": "HDX HAPI Poverty Rate",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -285,11 +306,12 @@ results_subcategory_datasets = {
             },
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
-        "dataset_source": "Test Provider",
+        "dataset_source": "Test Provider 2",
+        "license_id": "cc-by-igo",
     },
     "data_availability": {
         "name": "hdx-hapi-data-availability",
-        "title": "HDX HAPI data data_availability",
+        "title": "HDX HAPI Data Availability",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -302,15 +324,16 @@ results_subcategory_datasets = {
             }
         ],
         "dataset_date": "[9990-12-31T00:00:00 TO 0001-01-01T23:59:59]",
-        "dataset_source": "",
+        "dataset_source": "HDX HAPI",
+        "license_id": "cc-by-igo",
     },
 }
 
 results_subcategory_resources = {
     "idps": [
         {
-            "name": "Global IDPs Data",
-            "description": 'IDPs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons) for more information  \n Source: [International Organization for Migration (IOM)](https://data.humdata.org/organization/f53d32cd-132c-4ef4-bc6d-058f94d08adf?)  \n License: Copyright © International Organization for Migration 2018 IOM reserves the right to assert ownership of the Materials collected on the https://data.humdata.org/ website. The Materials may be viewed, downloaded, and printed for non-commercial use only, without, inter alia, any right to sell, resell, redistribute or create derivative works therefrom. At all times the User shall credit the DTM as the source, unless otherwise stated. The user must include the URL of the Materials from the HDX Website, as well as the following credit line: Source: "International Organization for Migration (IOM), Displacement Tracking Matrix (DTM)".',
+            "name": "Global Internally-Displaced Persons",
+            "description": "IDPs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -318,8 +341,8 @@ results_subcategory_resources = {
     ],
     "refugees": [
         {
-            "name": "Global Refugees Data",
-            "description": "Refugees and Persons of Concern data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#refugees-persons-of-concern) for more information  \n Source: [UNHCR](https://data.humdata.org/organization/unhcr)  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)",
+            "name": "Global Refugees & Persons of Concern",
+            "description": "Refugees and Persons of Concern data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#refugees-persons-of-concern) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -327,8 +350,8 @@ results_subcategory_resources = {
     ],
     "returnees": [
         {
-            "name": "Global Returnees Data",
-            "description": "Returnees data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#returnees) for more information  \n Source: [UNHCR](https://data.humdata.org/organization/unhcr)  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)",
+            "name": "Global Returnees",
+            "description": "Returnees data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#returnees) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -336,8 +359,8 @@ results_subcategory_resources = {
     ],
     "humanitarian_needs": [
         {
-            "name": "Global Humanitarian Needs Data",
-            "description": "Humanitarian needs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#humanitarian-needs) for more information  \n Source: [OCHA HPC Tools](https://data.humdata.org/organization/49f12a06-1605-4f98-89f1-eaec37a0fdfe)  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)",
+            "name": "Global Humanitarian Needs",
+            "description": "Humanitarian needs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#humanitarian-needs) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -345,8 +368,8 @@ results_subcategory_resources = {
     ],
     "operational_presence": [
         {
-            "name": "Global Operational Presence Data",
-            "description": "Who is doing What Where - Operational Presence data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#who-is-doing-what-where-operational-presence) for more information  \n Source: [OCHA Lebanon](https://data.humdata.org/organization/a5d3183c-aa19-4320-be20-afb8eeb23ba9)  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)",
+            "name": "Global Who is Doing What Where - Operational Presence",
+            "description": "Who is doing What Where - Operational Presence data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#who-is-doing-what-where-operational-presence) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -354,8 +377,8 @@ results_subcategory_resources = {
     ],
     "funding": [
         {
-            "name": "Global Funding Data",
-            "description": "Funding data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#funding) for more information  \n Source: [OCHA Financial Tracking System (FTS)](https://data.humdata.org/organization/fb7c2910-6080-4b66-8b4f-0be9b6dc4d8e)  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)",
+            "name": "Global Funding",
+            "description": "Funding data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#funding) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -363,8 +386,8 @@ results_subcategory_resources = {
     ],
     "conflict_event": [
         {
-            "name": "Global Conflict Event Data",
-            "description": "Conflict Event data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#conflict-events) for more information  \n Source: [Armed Conflict Location & Event Data Project (ACLED)](https://data.humdata.org/organization/b67e6c74-c185-4f43-b561-0e114a736f19)  \n License: By using ACLED data you agree to abide by the [Terms of Use and Attribution Policy](https://acleddata.com/terms-of-use/).",
+            "name": "Global Conflict Events",
+            "description": "Conflict Event data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#conflict-events) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -372,8 +395,8 @@ results_subcategory_resources = {
     ],
     "national_risk": [
         {
-            "name": "Global National Risk Data",
-            "description": "National Risk data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#national-risk) for more information  \n Source: [INFORM](https://data.humdata.org/organization/e116c55a-d536-4b47-9308-94b1c7457afe)  \n License: [Creative Commons Attribution International](https://data.humdata.org/faqs/licenses)",
+            "name": "Global National Risk",
+            "description": "National Risk data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#national-risk) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -381,8 +404,8 @@ results_subcategory_resources = {
     ],
     "food_security": [
         {
-            "name": "Global Food Security Data",
-            "description": "Food Security data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_and_nutrition/#food-security) for more information  \n Source: [Integrated Food Security Phase Classification (IPC)](https://data.humdata.org/organization/da501ffc-aadb-43f5-9d28-8fa572fd9ce0)  \n License: [Public Domain / No Restrictions](https://data.humdata.org/faqs/licenses)",
+            "name": "Global Food Security",
+            "description": "Food Security data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_and_nutrition/#food-security) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -390,8 +413,8 @@ results_subcategory_resources = {
     ],
     "food_price": [
         {
-            "name": "Global Food Price Data",
-            "description": "Food Prices data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_and_nutrition/#food-prices) for more information  \n Source: [WFP - World Food Programme](https://data.humdata.org/organization/3ecac442-7fed-448d-8f78-b385ef6f84e7)  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)",
+            "name": "Global Food Prices",
+            "description": "Food Prices data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_and_nutrition/#food-prices) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -399,7 +422,7 @@ results_subcategory_resources = {
     ],
     "population": [
         {
-            "name": "Global Population Data",
+            "name": "Global Baseline Population",
             "description": "TODO",
             "format": "csv",
             "resource_type": "file.upload",
@@ -408,8 +431,8 @@ results_subcategory_resources = {
     ],
     "poverty_rate": [
         {
-            "name": "Global Poverty Rate Data",
-            "description": "Poverty Rate data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/population_and_socio-economy/#poverty-rate)  \n Source: [Oxford Poverty & Human Development Initiative](https://data.humdata.org/organization/00547685-9ded-4d69-9ca5-47d5278ead7c)  \n License: [Public Domain / No Restrictions](https://data.humdata.org/faqs/licenses)",
+            "name": "Global Poverty Rate",
+            "description": "Poverty Rate data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/population_and_socio-economy/#poverty-rate)",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -417,7 +440,7 @@ results_subcategory_resources = {
     ],
     "data_availability": [
         {
-            "name": "Global Data Availability Data",
+            "name": "Global Data Availability",
             "description": "Data Availability Data",
             "format": "csv",
             "resource_type": "file.upload",

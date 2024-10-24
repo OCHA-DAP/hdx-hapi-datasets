@@ -1,7 +1,7 @@
 results_subcategory_datasets = {
     "idps": {
         "name": "hdx-hapi-idps",
-        "title": "HDX HAPI Internally-Displaced Persons",
+        "title": "HDX HAPI - Affected People: Internally-Displaced Persons",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -32,7 +32,7 @@ results_subcategory_datasets = {
     },
     "refugees": {
         "name": "hdx-hapi-refugees",
-        "title": "HDX HAPI Refugees & Persons of Concern",
+        "title": "HDX HAPI - Affected People: Refugees & Persons of Concern",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -55,7 +55,7 @@ results_subcategory_datasets = {
     },
     "returnees": {
         "name": "hdx-hapi-returnees",
-        "title": "HDX HAPI Returnees",
+        "title": "HDX HAPI - Affected People: Returnees",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -78,7 +78,7 @@ results_subcategory_datasets = {
     },
     "humanitarian_needs": {
         "name": "hdx-hapi-humanitarian-needs",
-        "title": "HDX HAPI Humanitarian Needs",
+        "title": "HDX HAPI - Affected People: Humanitarian Needs",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -105,7 +105,7 @@ results_subcategory_datasets = {
     },
     "operational_presence": {
         "name": "hdx-hapi-operational-presence",
-        "title": "HDX HAPI Who is Doing What Where - Operational Presence",
+        "title": "HDX HAPI - Coordination & Context: 3W - Operational Presence",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -132,7 +132,7 @@ results_subcategory_datasets = {
     },
     "funding": {
         "name": "hdx-hapi-funding",
-        "title": "HDX HAPI Funding",
+        "title": "HDX HAPI - Coordination & Context: Funding",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -155,7 +155,7 @@ results_subcategory_datasets = {
     },
     "conflict_event": {
         "name": "hdx-hapi-conflict-event",
-        "title": "HDX HAPI Conflict Events",
+        "title": "HDX HAPI - Coordination & Context: Conflict Events",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -178,7 +178,7 @@ results_subcategory_datasets = {
     },
     "national_risk": {
         "name": "hdx-hapi-national-risk",
-        "title": "HDX HAPI National Risk",
+        "title": "HDX HAPI - Coordination & Context: National Risk",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -201,7 +201,7 @@ results_subcategory_datasets = {
     },
     "food_security": {
         "name": "hdx-hapi-food-security",
-        "title": "HDX HAPI Food Security",
+        "title": "HDX HAPI - Food Security & Nutrition: Food Security",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -224,7 +224,7 @@ results_subcategory_datasets = {
     },
     "food_price": {
         "name": "hdx-hapi-food-price",
-        "title": "HDX HAPI Food Prices",
+        "title": "HDX HAPI - Food Security & Nutrition: Food Prices",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -254,7 +254,7 @@ results_subcategory_datasets = {
     },
     "population": {
         "name": "hdx-hapi-population",
-        "title": "HDX HAPI Baseline Population",
+        "title": "HDX HAPI - Population & Socio-economy: Baseline Population",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -277,7 +277,7 @@ results_subcategory_datasets = {
     },
     "poverty_rate": {
         "name": "hdx-hapi-poverty-rate",
-        "title": "HDX HAPI Poverty Rate",
+        "title": "HDX HAPI - Population & Socio-economy: Poverty Rate",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -311,7 +311,7 @@ results_subcategory_datasets = {
     },
     "data_availability": {
         "name": "hdx-hapi-data-availability",
-        "title": "HDX HAPI Data Availability",
+        "title": "HDX HAPI - Metadata: Data Availability",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "hdx",
         "data_update_frequency": "1",
@@ -332,7 +332,7 @@ results_subcategory_datasets = {
 results_subcategory_resources = {
     "idps": [
         {
-            "name": "Global Internally-Displaced Persons",
+            "name": "Global Affected People: Internally-Displaced Persons",
             "description": "IDPs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons) for more information",
             "format": "csv",
             "resource_type": "file.upload",
@@ -341,7 +341,7 @@ results_subcategory_resources = {
     ],
     "refugees": [
         {
-            "name": "Global Refugees & Persons of Concern",
+            "name": "Global Affected People: Refugees & Persons of Concern",
             "description": "Refugees and Persons of Concern data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#refugees-persons-of-concern) for more information",
             "format": "csv",
             "resource_type": "file.upload",
@@ -350,7 +350,7 @@ results_subcategory_resources = {
     ],
     "returnees": [
         {
-            "name": "Global Returnees",
+            "name": "Global Affected People: Returnees",
             "description": "Returnees data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#returnees) for more information",
             "format": "csv",
             "resource_type": "file.upload",
@@ -359,7 +359,7 @@ results_subcategory_resources = {
     ],
     "humanitarian_needs": [
         {
-            "name": "Global Humanitarian Needs",
+            "name": "Global Affected People: Humanitarian Needs",
             "description": "Humanitarian needs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#humanitarian-needs) for more information",
             "format": "csv",
             "resource_type": "file.upload",
@@ -368,7 +368,7 @@ results_subcategory_resources = {
     ],
     "operational_presence": [
         {
-            "name": "Global Who is Doing What Where - Operational Presence",
+            "name": "Global Coordination & Context: 3W - Operational Presence",
             "description": "Who is doing What Where - Operational Presence data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#who-is-doing-what-where-operational-presence) for more information",
             "format": "csv",
             "resource_type": "file.upload",
@@ -377,7 +377,7 @@ results_subcategory_resources = {
     ],
     "funding": [
         {
-            "name": "Global Funding",
+            "name": "Global Coordination & Context: Funding",
             "description": "Funding data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#funding) for more information",
             "format": "csv",
             "resource_type": "file.upload",
@@ -386,7 +386,7 @@ results_subcategory_resources = {
     ],
     "conflict_event": [
         {
-            "name": "Global Conflict Events",
+            "name": "Global Coordination & Context: Conflict Events",
             "description": "Conflict Event data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#conflict-events) for more information",
             "format": "csv",
             "resource_type": "file.upload",
@@ -395,7 +395,7 @@ results_subcategory_resources = {
     ],
     "national_risk": [
         {
-            "name": "Global National Risk",
+            "name": "Global Coordination & Context: National Risk",
             "description": "National Risk data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#national-risk) for more information",
             "format": "csv",
             "resource_type": "file.upload",
@@ -404,7 +404,7 @@ results_subcategory_resources = {
     ],
     "food_security": [
         {
-            "name": "Global Food Security",
+            "name": "Global Food Security & Nutrition: Food Security",
             "description": "Food Security data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_and_nutrition/#food-security) for more information",
             "format": "csv",
             "resource_type": "file.upload",
@@ -413,7 +413,7 @@ results_subcategory_resources = {
     ],
     "food_price": [
         {
-            "name": "Global Food Prices",
+            "name": "Global Food Security & Nutrition: Food Prices",
             "description": "Food Prices data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_and_nutrition/#food-prices) for more information",
             "format": "csv",
             "resource_type": "file.upload",
@@ -422,8 +422,8 @@ results_subcategory_resources = {
     ],
     "population": [
         {
-            "name": "Global Baseline Population",
-            "description": "TODO",
+            "name": "Global Population & Socio-economy: Baseline Population",
+            "description": "Baseline Population data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/population_and_socio-economy/#baseline-population) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -431,8 +431,8 @@ results_subcategory_resources = {
     ],
     "poverty_rate": [
         {
-            "name": "Global Poverty Rate",
-            "description": "Poverty Rate data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/population_and_socio-economy/#poverty-rate)",
+            "name": "Global Population & Socio-economy: Poverty Rate",
+            "description": "Poverty Rate data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/population_and_socio-economy/#poverty-rate) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -440,8 +440,8 @@ results_subcategory_resources = {
     ],
     "data_availability": [
         {
-            "name": "Global Data Availability",
-            "description": "Data Availability Data",
+            "name": "Global Metadata: Data Availability",
+            "description": "Data Availability Data from HDX HAPI. Each row in this resource represents an administrative division for which data is available, by subcategory. Please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/metadata/#data-availability) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",

@@ -1,6 +1,6 @@
 default_db_uri: "postgresql+psycopg://postgres:postgres@localhost:5432/hapirestore"
 
-country_dataset_title: "HDX HAPI data for {suffix}"
+country_dataset_title: "HDX HAPI Data for {suffix}"
 dataset_name: "hdx-hapi-{suffix}"
 default_source: "HDX HAPI"
 default_license: "cc-by-igo"
@@ -8,13 +8,13 @@ country_multiple_licenses: "Multiple licenses, please see individual resources f
 
 subcategories:
   idps:
-    title: "HDX HAPI Internally-Displaced Persons"
+    title: "HDX HAPI - Affected People: Internally-Displaced Persons"
     tags:
       - "displacement"
       - "internally displaced persons-idp"
       - "migration"
     resource:
-      name: "Internally-Displaced Persons"
+      name: "Affected People: Internally-Displaced Persons"
       description: "IDPs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons) for more information"
       filename: "hdx_hapi_idps"
     hxltags:
@@ -35,11 +35,11 @@ subcategories:
       reference_period_end: "#date+end"
 
   refugees:
-    title: "HDX HAPI Refugees & Persons of Concern"
+    title: "HDX HAPI - Affected People: Refugees & Persons of Concern"
     tags:
       - "refugees"
     resource:
-      name: "Refugees & Persons of Concern"
+      name: "Affected People: Refugees & Persons of Concern"
       description: "Refugees and Persons of Concern data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#refugees-persons-of-concern) for more information"
       filename: "hdx_hapi_refugees"
     hxltags:
@@ -59,11 +59,11 @@ subcategories:
       reference_period_end: "#date+end"
 
   returnees:
-    title: "HDX HAPI Returnees"
+    title: "HDX HAPI - Affected People: Returnees"
     tags:
       - "returnees"
     resource:
-      name: "Returnees"
+      name: "Affected People: Returnees"
       description: "Returnees data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#returnees) for more information"
       filename: "hdx_hapi_returnees"
     hxltags:
@@ -83,12 +83,12 @@ subcategories:
       reference_period_end: "#date+end"
 
   humanitarian_needs:
-    title: "HDX HAPI Humanitarian Needs"
+    title: "HDX HAPI - Affected People: Humanitarian Needs"
     tags:
       - "humanitarian needs overview-hno"
       - "people in need-pin"
     resource:
-      name: "Humanitarian Needs"
+      name: "Affected People: Humanitarian Needs"
       description: "Humanitarian needs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#humanitarian-needs) for more information"
       filename: "hdx_hapi_humanitarian_needs"
     hxltags:
@@ -110,14 +110,13 @@ subcategories:
       reference_period_end: "#date+end"
 
   operational_presence:
-    title: "HDX HAPI Who is Doing What Where - Operational Presence"
+    title: "HDX HAPI - Coordination & Context: 3W - Operational Presence"
     tags:
       - "operational presence"
       - "who is doing what and where-3w-4w-5w"
     resource:
-      name: "Who is Doing What Where - Operational Presence"
+      name: "Coordination & Context: 3W - Operational Presence"
       description: "Who is doing What Where - Operational Presence data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#who-is-doing-what-where-operational-presence) for more information"
-      country_description: "  \n Source: [OCHA Lebanon](https://data.humdata.org/organization/a5d3183c-aa19-4320-be20-afb8eeb23ba9)  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
       filename: "hdx_hapi_operational_presence"
     hxltags:
       location_code: "#country+code"
@@ -138,13 +137,12 @@ subcategories:
       reference_period_end: "#date+end"
 
   funding:
-    title: "HDX HAPI Funding"
+    title: "HDX HAPI - Coordination & Context: Funding"
     tags:
       - "funding"
     resource:
-      name: "Funding"
+      name: "Coordination & Context: Funding"
       description: "Funding data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#funding) for more information"
-      country_description: "  \n Source: [OCHA Financial Tracking System (FTS)](https://data.humdata.org/organization/fb7c2910-6080-4b66-8b4f-0be9b6dc4d8e)  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
       filename: "hdx_hapi_funding"
     hxltags:
       location_code: "#country+code"
@@ -160,13 +158,12 @@ subcategories:
       reference_period_end: "#date+end"
 
   conflict_event:
-    title: "HDX HAPI Conflict Events"
+    title: "HDX HAPI - Coordination & Context: Conflict Events"
     tags:
       - "conflict-violence"
     resource:
-      name: "Conflict Events"
+      name: "Coordination & Context: Conflict Events"
       description: "Conflict Event data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#conflict-events) for more information"
-      country_description: "  \n Source: [Armed Conflict Location & Event Data Project (ACLED)](https://data.humdata.org/organization/b67e6c74-c185-4f43-b561-0e114a736f19)  \n License: By using ACLED data you agree to abide by the [Terms of Use and Attribution Policy](https://acleddata.com/terms-of-use/)."
       filename: "hdx_hapi_conflict_event"
     hxltags:
       location_code: "#country+code"
@@ -185,13 +182,12 @@ subcategories:
       reference_period_end: "#date+end"
 
   national_risk:
-    title: "HDX HAPI National Risk"
+    title: "HDX HAPI - Coordination & Context: National Risk"
     tags:
       - "hazards and risk"
     resource:
-      name: "National Risk"
+      name: "Coordination & Context: National Risk"
       description: "National Risk data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#national-risk) for more information"
-      country_description: "  \n Source: [INFORM](https://data.humdata.org/organization/e116c55a-d536-4b47-9308-94b1c7457afe)  \n License: [Creative Commons Attribution International](https://data.humdata.org/faqs/licenses)"
       filename: "hdx_hapi_national_risk"
     hxltags:
       location_code: "#country+code"
@@ -209,13 +205,12 @@ subcategories:
       reference_period_end: "#date+end"
 
   food_security:
-    title: "HDX HAPI Food Security"
+    title: "HDX HAPI - Food Security & Nutrition: Food Security"
     tags:
       - "food security"
     resource:
-      name: "Food Security"
+      name: "Food Security & Nutrition: Food Security"
       description: "Food Security data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_and_nutrition/#food-security) for more information"
-      country_description: "  \n Source: [Integrated Food Security Phase Classification (IPC)](https://data.humdata.org/organization/da501ffc-aadb-43f5-9d28-8fa572fd9ce0)  \n License: [Public Domain / No Restrictions](https://data.humdata.org/faqs/licenses)"
       filename: "hdx_hapi_food_security"
     hxltags:
       location_code: "#country+code"
@@ -235,15 +230,14 @@ subcategories:
       reference_period_end: "#date+end"
 
   food_price:
-    title: "HDX HAPI Food Prices"
+    title: "HDX HAPI - Food Security & Nutrition: Food Prices"
     tags:
       - "economics"
       - "markets"
       - "food security"
     resource:
-      name: "Food Prices"
+      name: "Food Security & Nutrition: Food Prices"
       description: "Food Prices data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_and_nutrition/#food-prices) for more information"
-      country_description: "  \n Source: [WFP - World Food Programme](https://data.humdata.org/organization/3ecac442-7fed-448d-8f78-b385ef6f84e7)  \n License: [Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
       filename: "hdx_hapi_food_price"
     hxltags:
       location_code: "#country+code"
@@ -269,13 +263,12 @@ subcategories:
       reference_period_end: "#date+end"
 
   population:
-    title: "HDX HAPI Baseline Population"
+    title: "HDX HAPI - Population & Socio-economy: Baseline Population"
     tags:
       - "baseline population"
     resource:
-      name: "Baseline Population"
-      description: TODO
-      country_description: ""
+      name: "Population & Socio-economy: Baseline Population"
+      description: "Baseline Population data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/population_and_socio-economy/#baseline-population) for more information"
       filename: "hdx_hapi_population"
     hxltags:
       location_code: "#country+code"
@@ -296,16 +289,15 @@ subcategories:
       reference_period_end: "#date+end"
 
   poverty_rate:
-    title: "HDX HAPI Poverty Rate"
+    title: "HDX HAPI - Population & Socio-economy: Poverty Rate"
     tags:
       - "education"
       - "health"
       - "indicators"
       - "poverty"
     resource:
-      name: "Poverty Rate"
-      description: "Poverty Rate data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/population_and_socio-economy/#poverty-rate)"
-      country_description: "  \n Source: [Oxford Poverty & Human Development Initiative](https://data.humdata.org/organization/00547685-9ded-4d69-9ca5-47d5278ead7c)  \n License: [Public Domain / No Restrictions](https://data.humdata.org/faqs/licenses)"
+      name: "Population & Socio-economy: Poverty Rate"
+      description: "Poverty Rate data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/population_and_socio-economy/#poverty-rate) for more information"
       filename: "hdx_hapi_poverty_rate"
     hxltags:
       location_code: "#country+code"
@@ -323,14 +315,13 @@ subcategories:
       reference_period_end: "#date+end"
 
   data_availability:
-    title: "HDX HAPI Data Availability"
+    title: "HDX HAPI - Metadata: Data Availability"
     source_override: "[HDX HAPI](https://hapi.humdata.org/)"
     license_override: "[Creative Commons Attribution for Intergovernmental Organisations](http://creativecommons.org/licenses/by/3.0/igo/legalcode)"
     tags: []
     resource:
-      name: "Data Availability"
-      description: "Data Availability Data"
-      country_description: ""
+      name: "Metadata: Data Availability"
+      description: "Data Availability Data from HDX HAPI. Each row in this resource represents an administrative division for which data is available, by subcategory. Please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/metadata/#data-availability) for more information"
       filename: "hdx_hapi_data_availability"
     hxltags:
       category: "#category"

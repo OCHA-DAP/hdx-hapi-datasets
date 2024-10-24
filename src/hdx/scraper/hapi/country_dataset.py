@@ -13,9 +13,9 @@ class CountryDataset(BaseDataset):
         self, folder: str, configuration: Configuration, countryiso3: str
     ) -> None:
         self.countryiso3 = countryiso3
-        countryname = Country.get_country_name_from_iso3(countryiso3)
+        self.countryname = Country.get_country_name_from_iso3(countryiso3)
         title = configuration["country_dataset_title"].format(
-            suffix=countryname
+            suffix=self.countryname
         )
         name = configuration["dataset_name"].format(suffix=countryiso3)
         super().__init__(folder, configuration, title, name)
@@ -32,6 +32,7 @@ class CountryDataset(BaseDataset):
     ) -> bool:
         resource_info = subcategory_info["resource"]
         resource_name = resource_info["name"]
+        resource_name = f"{resource_name} for {self.countryname}"
         resource_description = resource_info["description"]
         source_override = subcategory_info.get("source_override")
         if source_override:

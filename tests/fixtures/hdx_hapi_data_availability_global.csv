@@ -2,6 +2,7 @@ category,subcategory,location_code,admin1_code,admin1_name,admin2_code,admin2_na
 #category,#subcategory,#country+code,#adm1+code,#adm1+name,#adm2+code,#adm2+name,#date+updated
 coordination-context,conflict-event,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2024-10-15
 affected-people,humanitarian-needs,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2024-10-15
+affected-people,humanitarian-needs,SDN,CD01,CD01 adm1,CD0101,CD0101 adm2,2024-10-16
 coordination-context,operational-presence,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2024-10-15
 coordination-context,funding,AFG,,,,,2024-10-15
 food,food-price,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2024-10-16

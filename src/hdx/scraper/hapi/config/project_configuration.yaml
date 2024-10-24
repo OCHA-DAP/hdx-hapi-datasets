@@ -9,8 +9,6 @@ country_multiple_licenses: "Multiple licenses, please see individual resources f
 subcategories:
   idps:
     title: "HDX HAPI Internally-Displaced Persons"
-    source: "[International Organization for Migration (IOM)](https://data.humdata.org/organization/f53d32cd-132c-4ef4-bc6d-058f94d08adf?)"
-    license: "Copyright © International Organization for Migration 2018 IOM reserves the right to assert ownership of the Materials collected on the https://data.humdata.org/ website. The Materials may be viewed, downloaded, and printed for non-commercial use only, without, inter alia, any right to sell, resell, redistribute or create derivative works therefrom. At all times the User shall credit the DTM as the source, unless otherwise stated. The user must include the URL of the Materials from the HDX Website, as well as the following credit line: Source: \"International Organization for Migration (IOM), Displacement Tracking Matrix (DTM)\"."
     tags:
       - "displacement"
       - "internally displaced persons-idp"
@@ -38,8 +36,6 @@ subcategories:
 
   refugees:
     title: "HDX HAPI Refugees & Persons of Concern"
-    source: "[UNHCR](https://data.humdata.org/organization/unhcr)"
-    license: "[Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
     tags:
       - "refugees"
     resource:
@@ -64,8 +60,6 @@ subcategories:
 
   returnees:
     title: "HDX HAPI Returnees"
-    source: "[UNHCR](https://data.humdata.org/organization/unhcr)"
-    license: "[Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
     tags:
       - "returnees"
     resource:
@@ -90,8 +84,6 @@ subcategories:
 
   humanitarian_needs:
     title: "HDX HAPI Humanitarian Needs"
-    source: "[OCHA HPC Tools](https://data.humdata.org/organization/49f12a06-1605-4f98-89f1-eaec37a0fdfe)"
-    license: "[Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
     tags:
       - "humanitarian needs overview-hno"
       - "people in need-pin"
@@ -119,8 +111,6 @@ subcategories:
 
   operational_presence:
     title: "HDX HAPI Who is Doing What Where - Operational Presence"
-    source: "[OCHA HPC Tools](https://data.humdata.org/organization/49f12a06-1605-4f98-89f1-eaec37a0fdfe)"
-    license: "[Creative Commons Attribution for Intergovernmental Organisations](https://data.humdata.org/faqs/licenses)"
     tags:
       - "operational presence"
       - "who is doing what and where-3w-4w-5w"

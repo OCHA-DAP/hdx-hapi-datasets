@@ -1,4 +1,5 @@
 import logging
+from enum import Enum
 from typing import Dict, List, Tuple
 
 from sqlalchemy import select
@@ -156,6 +157,8 @@ class SubcategoryReader:
                     subcategory_dataset.update_start_date(value)
                     subcategory_dataset.update_end_date(value)
                     value = iso_string_from_datetime(value)
+                if isinstance(value, Enum):
+                    value = value.value
                 row[header] = str(value)
             rows.append(row)
             for countryiso3 in countryiso3s:

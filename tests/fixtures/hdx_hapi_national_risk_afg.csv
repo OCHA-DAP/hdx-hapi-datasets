@@ -1,3 +1,3 @@
 location_code,has_hrp,in_gho,risk_class,global_rank,overall_risk,hazard_exposure_risk,vulnerability_risk,coping_capacity_risk,meta_missing_indicators_pct,meta_avg_recentness_years,reference_period_start,reference_period_end
 #country+code,#meta+has_hrp,#meta+in_gho,#risk+class,#risk+rank,#risk+total,#risk+hazard,#risk+vulnerability,#risk+coping+capacity,#meta+missing+indicators+pct,#meta+recentness+avg,#date+start,#date+end
-AFG,False,False,RiskClass.LOW,1,1.0,1.0,1.0,1.0,2.0,2.0,2024-01-01,2024-12-31
+AFG,False,False,2,1,1.0,1.0,1.0,1.0,2.0,2.0,2024-01-01,2024-12-31

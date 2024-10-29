@@ -1,4 +1,4 @@
 location_code,has_hrp,in_gho,provider_admin1_name,provider_admin2_name,admin1_code,admin1_name,admin2_code,admin2_name,sector_code,sector_name,category,population_status,population,reference_period_start,reference_period_end
 #country+code,#meta+has_hrp,#meta+in_gho,#adm1+name+provider,#adm2+name+provider,#adm1+code,#adm1+name,#adm2+code,#adm2+name,#sector+cluster+code,#sector+cluster+name,#category,#population+status,#population,#date+start,#date+end
-AFG,False,False,AB Region,AB Place,AB01,AB01 adm1,AB0101,AB0101 adm2,SEC,Sector 1,Adult Female,PopulationStatus.INNEED,100,2024-01-01,2024-12-31
-SDN,True,True,CD Region,CD Place,CD01,CD01 adm1,CD0101,CD0101 adm2,SEC,Sector 1,Child Male,PopulationStatus.TARGETED,20,2023-11-04,2024-12-31
+AFG,False,False,AB Region,AB Place,AB01,AB01 adm1,AB0101,AB0101 adm2,SEC,Sector 1,Adult Female,INN,100,2024-01-01,2024-12-31
+SDN,True,True,CD Region,CD Place,CD01,CD01 adm1,CD0101,CD0101 adm2,SEC,Sector 1,Child Male,TGT,20,2023-11-04,2024-12-31

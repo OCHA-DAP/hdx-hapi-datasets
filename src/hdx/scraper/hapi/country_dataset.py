@@ -47,7 +47,7 @@ class CountryDataset(BaseDataset):
                         iter(hdx_providers)
                     )
                     site_url = self.configuration.get_hdx_site_url()
-                    source = f"[{hdx_provider_name}]({site_url}/{hdx_provider_stub})"
+                    source = f"[{hdx_provider_name}]({site_url}/organization/{hdx_provider_stub})"
                     resource_description = (
                         f"{resource_description}  \nSource: {source}"
                     )

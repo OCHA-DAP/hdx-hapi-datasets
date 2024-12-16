@@ -2,7 +2,7 @@ result_country_dataset = {
     "name": "hdx-hapi-afg",
     "title": "HDX HAPI Data for Afghanistan",
     "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
-    "owner_org": "hdx-hapi",
+    "owner_org": "40d10ece-49de-4791-9aed-e164f1d16dd1",
     "data_update_frequency": "1",
     "groups": [{"name": "afg"}],
     "subnational": "1",

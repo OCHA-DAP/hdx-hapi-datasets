@@ -42,7 +42,7 @@ class BaseDataset(ABC):
             }
         )
         dataset.set_maintainer("196196be-6037-4488-8b71-d786adf4c081")
-        dataset.set_organization("hdx")
+        dataset.set_organization("hdx-hapi")
         dataset.set_expected_update_frequency("Every day")
         return dataset
 

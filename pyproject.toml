@@ -34,7 +34,7 @@ classifiers = [
 requires-python = ">=3.8"
 
 dependencies = [
-    "hapi-schema>= 0.9.3",
+    "hapi-schema>= 0.9.6",
     "hdx-python-api>= 6.3.5",
     "hdx-python-country>= 3.8.5",
     "hdx-python-database[postgresql]>= 1.3.4",

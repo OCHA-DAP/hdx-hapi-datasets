@@ -2,7 +2,7 @@
 #    uv pip compile pyproject.toml --resolver=backtracking --all-extras -o requirements.txt
 annotated-types==0.7.0
     # via pydantic
-attrs==24.2.0
+attrs==24.3.0
     # via
     #   frictionless
     #   jsonlines
@@ -10,7 +10,7 @@ attrs==24.2.0
     #   referencing
 cachetools==5.5.0
     # via google-auth
-certifi==2024.8.30
+certifi==2024.12.14
     # via requests
 cfgv==3.4.0
     # via pre-commit
@@ -22,7 +22,7 @@ ckanapi==4.8
     # via hdx-python-api
 click==8.1.7
     # via typer
-coverage==7.6.7
+coverage==7.6.9
     # via pytest-cov
 defopt==6.4.0
     # via hdx-python-api
@@ -44,7 +44,7 @@ filelock==3.16.1
     # via virtualenv
 frictionless==5.18.0
     # via hdx-python-utilities
-google-auth==2.36.0
+google-auth==2.37.0
     # via
     #   google-auth-oauthlib
     #   gspread
@@ -54,7 +54,7 @@ greenlet==3.1.1
     # via sqlalchemy
 gspread==6.1.4
     # via hdx-python-scraper
-hapi-schema==0.9.3
+hapi-schema==0.9.6
     # via hdx-hapi-datasets (pyproject.toml)
 hdx-python-api==6.3.5
     # via
@@ -77,7 +77,7 @@ hdx-python-utilities==3.7.4
     #   hdx-python-scraper
 humanize==4.11.0
     # via frictionless
-identify==2.6.2
+identify==2.6.3
     # via pre-commit
 idna==3.10
     # via
@@ -108,7 +108,7 @@ libhxl==5.2.2
     #   hdx-hapi-datasets (pyproject.toml)
     #   hdx-python-api
     #   hdx-python-country
-loguru==0.7.2
+loguru==0.7.3
     # via hdx-python-utilities
 makefun==1.15.6
     # via hdx-python-api
@@ -156,15 +156,15 @@ pyasn1==0.6.1
     #   rsa
 pyasn1-modules==0.4.1
     # via google-auth
-pydantic==2.10.0
+pydantic==2.10.3
     # via frictionless
-pydantic-core==2.27.0
+pydantic-core==2.27.1
     # via pydantic
 pygments==2.18.0
     # via rich
 pyphonetics==0.5.3
     # via hdx-python-country
-pytest==8.3.3
+pytest==8.3.4
     # via
     #   hdx-hapi-datasets (pyproject.toml)
     #   pytest-check
@@ -218,7 +218,7 @@ rfc3986==2.0.0
     # via frictionless
 rich==13.9.4
     # via typer
-rpds-py==0.21.0
+rpds-py==0.22.3
     # via
     #   jsonschema
     #   referencing
@@ -236,7 +236,7 @@ simpleeval==1.0.3
     # via frictionless
 simplejson==3.19.3
     # via ckanapi
-six==1.16.0
+six==1.17.0
     # via
     #   ckanapi
     #   pockets
@@ -263,7 +263,7 @@ text-unidecode==1.3
     # via python-slugify
 typeguard==4.4.1
     # via inflect
-typer==0.13.1
+typer==0.15.1
     # via frictionless
 typing-extensions==4.12.2
     # via
@@ -284,9 +284,9 @@ urllib3==2.2.3
     #   requests
 validators==0.34.0
     # via frictionless
-virtualenv==20.27.1
+virtualenv==20.28.0
     # via pre-commit
-wheel==0.45.0
+wheel==0.45.1
     # via libhxl
 xlrd==2.0.1
     # via hdx-python-utilities

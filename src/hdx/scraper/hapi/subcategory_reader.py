@@ -157,6 +157,12 @@ class SubcategoryReader:
                     subcategory_dataset.update_start_date(value)
                     subcategory_dataset.update_end_date(value)
                     value = iso_string_from_datetime(value)
+                elif hxltag[:4] == "#adm":
+                    attribute = hxltag[-4:]
+                    if attribute == "name":
+                        value = value.replace("UNSPECIFIED", "")
+                    elif attribute == "code" and "-XXX" in value:
+                        value = ""
                 if isinstance(value, Enum):
                     value = value.value
                 row[header] = str(value)

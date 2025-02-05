@@ -131,6 +131,15 @@ def main(
             datasets = Datasets(folder, configuration, countryiso3s)
             for subcategory in subcategories:
                 subcategory_reader.get_subcategory(subcategory, datasets)
+                if subcategories[subcategory]["make_global_dataset"]:
+                    logger.info(
+                        f"Making global dataset for subcategory {subcategory}"
+                    )
+                else:
+                    logger.info(
+                        f"Won't make global dataset for subcategory {subcategory}"
+                    )
+                    continue
                 subcategory_dataset = datasets.get_subcategory_dataset(
                     subcategory
                 )
@@ -149,6 +158,9 @@ def main(
                         batch=batch,
                     )
             for countryiso3 in countryiso3s:
+                logger.info(
+                    f"Making country dataset for country {countryiso3}"
+                )
                 country_dataset = datasets.get_country_dataset(countryiso3)
                 dataset = country_dataset.get_dataset()
                 if dataset:

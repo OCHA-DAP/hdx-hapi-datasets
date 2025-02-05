@@ -8,6 +8,7 @@ country_multiple_licenses: "Multiple licenses, please see individual resources f
 
 subcategories:
   idps:
+    make_global_dataset: True
     title: "HDX HAPI - Affected People: Internally-Displaced Persons"
     tags:
       - "displacement"
@@ -36,6 +37,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   refugees:
+    make_global_dataset: True
     title: "HDX HAPI - Affected People: Refugees & Persons of Concern"
     tags:
       - "refugees"
@@ -60,6 +62,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   returnees:
+    make_global_dataset: True
     title: "HDX HAPI - Affected People: Returnees"
     tags:
       - "returnees"
@@ -84,6 +87,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   humanitarian_needs:
+    make_global_dataset: True
     title: "HDX HAPI - Affected People: Humanitarian Needs"
     tags:
       - "humanitarian needs overview-hno"
@@ -112,6 +116,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   operational_presence:
+    make_global_dataset: True
     title: "HDX HAPI - Coordination & Context: 3W - Operational Presence"
     tags:
       - "operational presence"
@@ -140,6 +145,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   funding:
+    make_global_dataset: True
     title: "HDX HAPI - Coordination & Context: Funding"
     tags:
       - "funding"
@@ -161,6 +167,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   conflict_event:
+    make_global_dataset: True
     title: "HDX HAPI - Coordination & Context: Conflict Events"
     tags:
       - "conflict-violence"
@@ -186,6 +193,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   national_risk:
+    make_global_dataset: True
     title: "HDX HAPI - Coordination & Context: National Risk"
     tags:
       - "hazards and risk"
@@ -209,6 +217,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   food_security:
+    make_global_dataset: True
     title: "HDX HAPI - Food Security & Nutrition: Food Security"
     tags:
       - "food security"
@@ -235,6 +244,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   food_price:
+    make_global_dataset: True
     title: "HDX HAPI - Food Security & Nutrition: Food Prices"
     tags:
       - "economics"
@@ -269,6 +279,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   population:
+    make_global_dataset: True
     title: "HDX HAPI - Population & Socio-economy: Baseline Population"
     tags:
       - "baseline population"
@@ -296,6 +307,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   poverty_rate:
+    make_global_dataset: True
     title: "HDX HAPI - Population & Socio-economy: Poverty Rate"
     tags:
       - "education"
@@ -323,6 +335,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   data_availability:
+    make_global_dataset: True
     title: "HDX HAPI - Metadata: Data Availability"
     source_override: "[HDX HAPI](https://hapi.humdata.org/)"
     license_override: "[Creative Commons Attribution for Intergovernmental Organisations](http://creativecommons.org/licenses/by/3.0/igo/legalcode)"

@@ -116,7 +116,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   operational_presence:
-    make_global_dataset: True
+    make_global_dataset: False
     title: "HDX HAPI - Coordination & Context: 3W - Operational Presence"
     tags:
       - "operational presence"

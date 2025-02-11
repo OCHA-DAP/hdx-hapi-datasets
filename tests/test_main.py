@@ -26,7 +26,7 @@ from .subcategory_results import (
 logger = logging.getLogger(__name__)
 
 
-class TestHAPIPipelineHNO:
+class TestHDXHAPIDatasets:
     @pytest.fixture(scope="function")
     def configuration(self):
         UserAgent.set_global("test")

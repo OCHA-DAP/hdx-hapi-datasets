@@ -8,7 +8,7 @@ country_multiple_licenses: "Multiple licenses, please see individual resources f
 
 subcategories:
   idps:
-    make_global_dataset: True
+    make_global_dataset: False
     title: "HDX HAPI - Affected People: Internally-Displaced Persons"
     tags:
       - "displacement"
@@ -167,7 +167,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   conflict_event:
-    make_global_dataset: True
+    make_global_dataset: False
     title: "HDX HAPI - Coordination & Context: Conflict Events"
     tags:
       - "conflict-violence"
@@ -279,7 +279,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   population:
-    make_global_dataset: True
+    make_global_dataset: False
     title: "HDX HAPI - Population & Socio-economy: Baseline Population"
     tags:
       - "baseline population"

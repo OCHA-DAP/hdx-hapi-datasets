@@ -105,7 +105,7 @@ results_subcategory_datasets = {
     },
     "operational_presence": {
         "name": "hdx-hapi-operational-presence",
-        "title": "HDX HAPI - Coordination & Context: 3W - Operational Presence",
+        "title": "HDX HAPI - Coordination & Context: Operational Presence",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "40d10ece-49de-4791-9aed-e164f1d16dd1",
         "data_update_frequency": "1",
@@ -201,7 +201,7 @@ results_subcategory_datasets = {
     },
     "food_security": {
         "name": "hdx-hapi-food-security",
-        "title": "HDX HAPI - Food Security & Nutrition: Food Security",
+        "title": "HDX HAPI - Food Security, Nutrition & Poverty: Food Security",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "40d10ece-49de-4791-9aed-e164f1d16dd1",
         "data_update_frequency": "1",
@@ -224,7 +224,7 @@ results_subcategory_datasets = {
     },
     "food_price": {
         "name": "hdx-hapi-food-price",
-        "title": "HDX HAPI - Food Security & Nutrition: Food Prices",
+        "title": "HDX HAPI - Food Security, Nutrition & Poverty: Food Prices & Market Monitor",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "40d10ece-49de-4791-9aed-e164f1d16dd1",
         "data_update_frequency": "1",
@@ -254,7 +254,7 @@ results_subcategory_datasets = {
     },
     "population": {
         "name": "hdx-hapi-population",
-        "title": "HDX HAPI - Population & Socio-economy: Baseline Population",
+        "title": "HDX HAPI - Geography & Infrastructure: Baseline Population",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "40d10ece-49de-4791-9aed-e164f1d16dd1",
         "data_update_frequency": "1",
@@ -277,7 +277,7 @@ results_subcategory_datasets = {
     },
     "poverty_rate": {
         "name": "hdx-hapi-poverty-rate",
-        "title": "HDX HAPI - Population & Socio-economy: Poverty Rate",
+        "title": "HDX HAPI - Food Security, Nutrition & Poverty: Poverty Rate",
         "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
         "owner_org": "40d10ece-49de-4791-9aed-e164f1d16dd1",
         "data_update_frequency": "1",
@@ -368,8 +368,8 @@ results_subcategory_resources = {
     ],
     "operational_presence": [
         {
-            "name": "Global Coordination & Context: 3W - Operational Presence",
-            "description": "Who is doing What Where - Operational Presence data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#who-is-doing-what-where-operational-presence) for more information",
+            "name": "Global Coordination & Context: Operational Presence",
+            "description": "Operational Presence data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#operational-presence) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -404,8 +404,8 @@ results_subcategory_resources = {
     ],
     "food_security": [
         {
-            "name": "Global Food Security & Nutrition: Food Security",
-            "description": "Food Security data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_and_nutrition/#food-security) for more information",
+            "name": "Global Food Security, Nutrition & Poverty: Food Security",
+            "description": "Food Security data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-security) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -413,8 +413,8 @@ results_subcategory_resources = {
     ],
     "food_price": [
         {
-            "name": "Global Food Security & Nutrition: Food Prices",
-            "description": "Food Prices data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_and_nutrition/#food-prices) for more information",
+            "name": "Global Food Security, Nutrition & Poverty: Food Prices & Market Monitor",
+            "description": "Food Prices & Market Monitor data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -422,8 +422,8 @@ results_subcategory_resources = {
     ],
     "population": [
         {
-            "name": "Global Population & Socio-economy: Baseline Population",
-            "description": "Baseline Population data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/population_and_socio-economy/#baseline-population) for more information",
+            "name": "Global Geography & Infrastructure: Baseline Population",
+            "description": "Baseline Population data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/geography_and_infrastructure/#baseline-population) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",
@@ -431,8 +431,8 @@ results_subcategory_resources = {
     ],
     "poverty_rate": [
         {
-            "name": "Global Population & Socio-economy: Poverty Rate",
-            "description": "Poverty Rate data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/population_and_socio-economy/#poverty-rate) for more information",
+            "name": "Global Food Security, Nutrition & Poverty: Poverty Rate",
+            "description": "Poverty Rate data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#poverty-rate) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",

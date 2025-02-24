@@ -37,7 +37,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   refugees:
-    make_global_dataset: True
+    make_global_dataset: False
     title: "HDX HAPI - Affected People: Refugees & Persons of Concern"
     tags:
       - "refugees"
@@ -62,7 +62,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   returnees:
-    make_global_dataset: True
+    make_global_dataset: False
     title: "HDX HAPI - Affected People: Returnees"
     tags:
       - "returnees"

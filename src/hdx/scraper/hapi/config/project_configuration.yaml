@@ -145,7 +145,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   funding:
-    make_global_dataset: True
+    make_global_dataset: False
     title: "HDX HAPI - Coordination & Context: Funding"
     tags:
       - "funding"

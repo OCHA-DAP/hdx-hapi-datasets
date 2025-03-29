@@ -244,7 +244,7 @@ subcategories:
       reference_period_end: "#date+end"
 
   food_price:
-    make_global_dataset: True
+    make_global_dataset: False
     title: "HDX HAPI - Food Security, Nutrition & Poverty: Food Prices & Market Monitor"
     tags:
       - "economics"

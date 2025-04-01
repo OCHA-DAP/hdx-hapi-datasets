@@ -96,6 +96,7 @@ result_country_dataset = {
     "dataset_source": "Test Provider, Test Provider 2",
     "license_id": "hdx-other",
     "license_other": "Multiple licenses, please see individual resources for specific license information",
+    "dataset_preview": "no_preview",
 }
 
 result_country_resources = [

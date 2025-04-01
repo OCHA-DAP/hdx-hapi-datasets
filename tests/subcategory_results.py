@@ -29,6 +29,7 @@ results_subcategory_datasets = {
         "dataset_source": "Test Provider",
         "license_id": "hdx-other",
         "license_other": "mylicense",
+        "dataset_preview": "no_preview",
     },
     "refugees": {
         "name": "hdx-hapi-refugees",
@@ -52,6 +53,7 @@ results_subcategory_datasets = {
         "dataset_source": "Test Provider",
         "license_id": "hdx-other",
         "license_other": "mylicense",
+        "dataset_preview": "no_preview",
     },
     "returnees": {
         "name": "hdx-hapi-returnees",
@@ -75,6 +77,7 @@ results_subcategory_datasets = {
         "dataset_source": "Test Provider",
         "license_id": "hdx-other",
         "license_other": "mylicense",
+        "dataset_preview": "no_preview",
     },
     "humanitarian_needs": {
         "name": "hdx-hapi-humanitarian-needs",
@@ -102,6 +105,7 @@ results_subcategory_datasets = {
         "dataset_source": "Test Provider, Test Provider 2",
         "license_id": "hdx-other",
         "license_other": "[Creative Commons Attribution for Intergovernmental Organisations](http://creativecommons.org/licenses/by/3.0/igo/legalcode)  \nmylicense",
+        "dataset_preview": "no_preview",
     },
     "operational_presence": {
         "name": "hdx-hapi-operational-presence",
@@ -129,6 +133,7 @@ results_subcategory_datasets = {
         "dataset_source": "Test Provider",
         "license_id": "hdx-other",
         "license_other": "mylicense",
+        "dataset_preview": "no_preview",
     },
     "funding": {
         "name": "hdx-hapi-funding",
@@ -152,6 +157,7 @@ results_subcategory_datasets = {
         "dataset_source": "Test Provider",
         "license_id": "hdx-other",
         "license_other": "mylicense",
+        "dataset_preview": "no_preview",
     },
     "conflict_event": {
         "name": "hdx-hapi-conflict-event",
@@ -175,6 +181,7 @@ results_subcategory_datasets = {
         "dataset_source": "Test Provider",
         "license_id": "hdx-other",
         "license_other": "mylicense",
+        "dataset_preview": "no_preview",
     },
     "national_risk": {
         "name": "hdx-hapi-national-risk",
@@ -198,6 +205,7 @@ results_subcategory_datasets = {
         "dataset_source": "Test Provider",
         "license_id": "hdx-other",
         "license_other": "mylicense",
+        "dataset_preview": "no_preview",
     },
     "food_security": {
         "name": "hdx-hapi-food-security",
@@ -221,6 +229,7 @@ results_subcategory_datasets = {
         "dataset_source": "Test Provider",
         "license_id": "hdx-other",
         "license_other": "mylicense",
+        "dataset_preview": "no_preview",
     },
     "food_price": {
         "name": "hdx-hapi-food-price",
@@ -251,6 +260,7 @@ results_subcategory_datasets = {
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider 2",
         "license_id": "cc-by-igo",
+        "dataset_preview": "no_preview",
     },
     "population": {
         "name": "hdx-hapi-population",
@@ -274,6 +284,7 @@ results_subcategory_datasets = {
         "dataset_source": "Test Provider",
         "license_id": "hdx-other",
         "license_other": "mylicense",
+        "dataset_preview": "no_preview",
     },
     "poverty_rate": {
         "name": "hdx-hapi-poverty-rate",
@@ -308,6 +319,7 @@ results_subcategory_datasets = {
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider 2",
         "license_id": "cc-by-igo",
+        "dataset_preview": "no_preview",
     },
     "data_availability": {
         "name": "hdx-hapi-data-availability",
@@ -326,6 +338,7 @@ results_subcategory_datasets = {
         "dataset_date": "[2024-10-15T00:00:00 TO 2024-10-16T23:59:59]",
         "dataset_source": "HDX HAPI",
         "license_id": "cc-by-igo",
+        "dataset_preview": "no_preview",
     },
 }
 

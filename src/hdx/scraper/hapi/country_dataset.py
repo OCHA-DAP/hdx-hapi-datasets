@@ -14,9 +14,7 @@ class CountryDataset(BaseDataset):
     ) -> None:
         self.countryiso3 = countryiso3
         self.countryname = Country.get_country_name_from_iso3(countryiso3)
-        title = configuration["country_dataset_title"].format(
-            suffix=self.countryname
-        )
+        title = configuration["country_dataset_title"].format(suffix=self.countryname)
         name = configuration["dataset_name"].format(suffix=countryiso3)
         super().__init__(folder, configuration, title, name)
         self.dataset.add_country_location(countryiso3)
@@ -43,14 +41,10 @@ class CountryDataset(BaseDataset):
             hdx_providers = self.sources.get(subcategory)
             if hdx_providers:
                 if len(hdx_providers) == 1:
-                    hdx_provider_stub, hdx_provider_name = next(
-                        iter(hdx_providers)
-                    )
+                    hdx_provider_stub, hdx_provider_name = next(iter(hdx_providers))
                     site_url = self.configuration.get_hdx_site_url()
                     source = f"[{hdx_provider_name}]({site_url}/organization/{hdx_provider_stub})"
-                    resource_description = (
-                        f"{resource_description}  \nSource: {source}"
-                    )
+                    resource_description = f"{resource_description}  \nSource: {source}"
                 else:
                     raise ValueError(
                         f"Too many sources for {self.countryiso3}: {resource_name}!"

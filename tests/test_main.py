@@ -135,9 +135,7 @@ class TestHDXHAPIDatasets:
                 # dsr = {}
                 for subcategory in subcategories:
                     subcategory_reader.get_subcategory(subcategory, datasets)
-                    subcategory_dataset = datasets.get_subcategory_dataset(
-                        subcategory
-                    )
+                    subcategory_dataset = datasets.get_subcategory_dataset(subcategory)
                     dataset = subcategory_dataset.get_dataset()
                     # ds[subcategory] = dataset
                     # dsr[subcategory] = dataset.get_resources()

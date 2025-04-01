@@ -14,16 +14,12 @@ class Datasets:
     ):
         self.subcategory_datasets = {}
         for subcategory in configuration["subcategories"]:
-            subcategory_dataset = SubcategoryDataset(
-                folder, configuration, subcategory
-            )
+            subcategory_dataset = SubcategoryDataset(folder, configuration, subcategory)
             self.subcategory_datasets[subcategory] = subcategory_dataset
 
         self.country_datasets = {}
         for countryiso3 in countryiso3s:
-            country_dataset = CountryDataset(
-                folder, configuration, countryiso3
-            )
+            country_dataset = CountryDataset(folder, configuration, countryiso3)
             self.country_datasets[countryiso3] = country_dataset
 
     def get_country_dataset(self, countryiso3: str) -> CountryDataset:

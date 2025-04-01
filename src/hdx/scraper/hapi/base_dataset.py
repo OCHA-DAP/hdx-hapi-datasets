@@ -61,9 +61,7 @@ class BaseDataset(ABC):
     def add_source(self, subcategory: str, source: Tuple[str, str]) -> None:
         dict_of_sets_add(self.sources, subcategory, source)
 
-    def add_license(
-        self, subcategory: str, license: Tuple[str, str, str, str]
-    ) -> None:
+    def add_license(self, subcategory: str, license: Tuple[str, str, str, str]) -> None:
         dict_of_sets_add(self.licenses, subcategory, license)
 
     def get_dataset(self) -> Optional[Dataset]:
@@ -83,9 +81,7 @@ class BaseDataset(ABC):
             all_licenses.update(licenses)
         match len(all_licenses):
             case 0:
-                self.dataset["license_id"] = self.configuration[
-                    "default_license"
-                ]
+                self.dataset["license_id"] = self.configuration["default_license"]
             case 1:
                 (
                     license_id,
@@ -111,9 +107,7 @@ class BaseDataset(ABC):
                         if license_id == "hdx-other":
                             licenses.append(f"{license_description}")
                         else:
-                            licenses.append(
-                                f"[{license_title}]({license_url})"
-                            )
+                            licenses.append(f"[{license_title}]({license_url})")
                 self.dataset["license_other"] = "  \n".join(licenses)
         return self.dataset
 

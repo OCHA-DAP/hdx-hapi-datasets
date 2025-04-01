@@ -122,16 +122,12 @@ class SubcategoryReader:
             country_datasets = []
             for countryiso3 in countryiso3s:
                 if countryiso3 in self.countryiso3s:
-                    country_datasets.append(
-                        datasets.get_country_dataset(countryiso3)
-                    )
+                    country_datasets.append(datasets.get_country_dataset(countryiso3))
 
             index = headers_to_index.get("resource_hdx_id")
             if index is not None:
                 resource_hdx_id = result[index]
-                hdx_provider = self.resource_hdx_id_to_hdx_provider[
-                    resource_hdx_id
-                ]
+                hdx_provider = self.resource_hdx_id_to_hdx_provider[resource_hdx_id]
                 license = self.resource_hdx_id_to_license[resource_hdx_id]
                 subcategory_dataset.add_source(subcategory, hdx_provider)
                 subcategory_dataset.add_license(subcategory, license)

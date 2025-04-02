@@ -107,6 +107,30 @@ results_subcategory_datasets = {
         "license_other": "[Creative Commons Attribution for Intergovernmental Organisations](http://creativecommons.org/licenses/by/3.0/igo/legalcode)  \nmylicense",
         "dataset_preview": "no_preview",
     },
+    "rainfall": {
+        "name": "hdx-hapi-rainfall",
+        "title": "HDX HAPI - Climate: Rainfall",
+        "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
+        "owner_org": "40d10ece-49de-4791-9aed-e164f1d16dd1",
+        "data_update_frequency": "1",
+        "subnational": "1",
+        "groups": [{"name": "afg"}],
+        "tags": [
+            {
+                "name": "hxl",
+                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+            },
+            {
+                "name": "climate-weather",
+                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+            },
+        ],
+        "dataset_date": "[2025-01-01T00:00:00 TO 2025-01-10T23:59:59]",
+        "dataset_source": "Test Provider",
+        "license_id": "hdx-other",
+        "license_other": "mylicense",
+        "dataset_preview": "no_preview",
+    },
     "operational_presence": {
         "name": "hdx-hapi-operational-presence",
         "title": "HDX HAPI - Coordination & Context: Operational Presence",
@@ -374,6 +398,15 @@ results_subcategory_resources = {
         {
             "name": "Global Affected People: Humanitarian Needs",
             "description": "Humanitarian needs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#humanitarian-needs) for more information",
+            "format": "csv",
+            "resource_type": "file.upload",
+            "url_type": "upload",
+        }
+    ],
+    "rainfall": [
+        {
+            "name": "Global Climate: Rainfall",
+            "description": "Rainfall data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/climate/#rainfall) for more information",
             "format": "csv",
             "resource_type": "file.upload",
             "url_type": "upload",

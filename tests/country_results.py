@@ -12,6 +12,10 @@ result_country_dataset = {
             "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
         },
         {
+            "name": "climate-weather",
+            "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+        },
+        {
             "name": "conflict-violence",
             "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
         },
@@ -124,6 +128,13 @@ result_country_resources = [
     {
         "name": "Affected People: Humanitarian Needs for Afghanistan",
         "description": "Humanitarian needs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#humanitarian-needs) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
+        "format": "csv",
+        "resource_type": "file.upload",
+        "url_type": "upload",
+    },
+    {
+        "name": "Climate: Rainfall for Afghanistan",
+        "description": "Rainfall data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/climate/#rainfall) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
         "format": "csv",
         "resource_type": "file.upload",
         "url_type": "upload",

@@ -68,6 +68,7 @@ class TestHDXHAPIDatasets:
                     "health",
                     "indicators",
                     "poverty",
+                    "climate-weather",
                 )
             ],
             "id": "b891512e-9516-4bf5-962a-7a289772a2a1",

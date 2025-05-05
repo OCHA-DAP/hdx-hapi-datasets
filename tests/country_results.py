@@ -107,6 +107,7 @@ result_country_resources = [
     {
         "name": "Affected People: Internally-Displaced Persons for Afghanistan",
         "description": "IDPs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
+        "p_coded": True,
         "format": "csv",
         "resource_type": "file.upload",
         "url_type": "upload",
@@ -128,6 +129,7 @@ result_country_resources = [
     {
         "name": "Affected People: Humanitarian Needs for Afghanistan",
         "description": "Humanitarian needs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#humanitarian-needs) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
+        "p_coded": True,
         "format": "csv",
         "resource_type": "file.upload",
         "url_type": "upload",
@@ -135,6 +137,7 @@ result_country_resources = [
     {
         "name": "Climate: Rainfall for Afghanistan",
         "description": "Rainfall data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/climate/#rainfall) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
+        "p_coded": True,
         "format": "csv",
         "resource_type": "file.upload",
         "url_type": "upload",
@@ -142,6 +145,7 @@ result_country_resources = [
     {
         "name": "Coordination & Context: Operational Presence for Afghanistan",
         "description": "Operational Presence data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#operational-presence) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
+        "p_coded": True,
         "format": "csv",
         "resource_type": "file.upload",
         "url_type": "upload",
@@ -156,6 +160,7 @@ result_country_resources = [
     {
         "name": "Coordination & Context: Conflict Events for Afghanistan",
         "description": "Conflict Event data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#conflict-events) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
+        "p_coded": True,
         "format": "csv",
         "resource_type": "file.upload",
         "url_type": "upload",
@@ -170,6 +175,7 @@ result_country_resources = [
     {
         "name": "Food Security, Nutrition & Poverty: Food Security for Afghanistan",
         "description": "Food Security data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-security) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
+        "p_coded": True,
         "format": "csv",
         "resource_type": "file.upload",
         "url_type": "upload",
@@ -177,6 +183,7 @@ result_country_resources = [
     {
         "name": "Food Security, Nutrition & Poverty: Food Prices & Market Monitor for Afghanistan",
         "description": "Food Prices & Market Monitor data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) for more information  \nSource: [Test Provider 2](https://data.humdata.org/organization/test_provider2)  \nLicense: [Creative Commons Attribution for Intergovernmental Organisations](http://creativecommons.org/licenses/by/3.0/igo/legalcode)",
+        "p_coded": True,
         "format": "csv",
         "resource_type": "file.upload",
         "url_type": "upload",
@@ -184,6 +191,7 @@ result_country_resources = [
     {
         "name": "Food Security, Nutrition & Poverty: Poverty Rate for Afghanistan",
         "description": "Poverty Rate data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#poverty-rate) for more information  \nSource: [Test Provider 2](https://data.humdata.org/organization/test_provider2)  \nLicense: [Creative Commons Attribution for Intergovernmental Organisations](http://creativecommons.org/licenses/by/3.0/igo/legalcode)",
+        "p_coded": True,
         "format": "csv",
         "resource_type": "file.upload",
         "url_type": "upload",
@@ -191,6 +199,7 @@ result_country_resources = [
     {
         "name": "Geography & Infrastructure: Baseline Population for Afghanistan",
         "description": "Baseline Population data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/geography_and_infrastructure/#baseline-population) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
+        "p_coded": True,
         "format": "csv",
         "resource_type": "file.upload",
         "url_type": "upload",
@@ -198,6 +207,7 @@ result_country_resources = [
     {
         "name": "Metadata: Data Availability for Afghanistan",
         "description": "Data Availability Data from HDX HAPI. Each row in this resource represents an administrative division for which data is available, by subcategory. Please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/metadata/#data-availability) for more information  \nSource: [HDX HAPI](https://hapi.humdata.org/)  \nLicense: [Creative Commons Attribution for Intergovernmental Organisations](http://creativecommons.org/licenses/by/3.0/igo/legalcode)",
+        "p_coded": True,
         "format": "csv",
         "resource_type": "file.upload",
         "url_type": "upload",

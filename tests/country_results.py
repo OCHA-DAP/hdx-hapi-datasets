@@ -96,7 +96,7 @@ result_country_dataset = {
             "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
         },
     ],
-    "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
+    "dataset_date": "[2024-01-01T00:00:00 TO 2025-01-10T23:59:59]",
     "dataset_source": "Test Provider, Test Provider 2",
     "license_id": "hdx-other",
     "license_other": "Multiple licenses, please see individual resources for specific license information",

@@ -135,14 +135,6 @@ result_country_resources = [
         "url_type": "upload",
     },
     {
-        "name": "Climate: Rainfall for Afghanistan",
-        "description": "Rainfall data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/climate/#rainfall) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
-        "p_coded": True,
-        "format": "csv",
-        "resource_type": "file.upload",
-        "url_type": "upload",
-    },
-    {
         "name": "Coordination & Context: Operational Presence for Afghanistan",
         "description": "Operational Presence data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#operational-presence) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
         "p_coded": True,
@@ -199,6 +191,14 @@ result_country_resources = [
     {
         "name": "Geography & Infrastructure: Baseline Population for Afghanistan",
         "description": "Baseline Population data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/geography_and_infrastructure/#baseline-population) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
+        "p_coded": True,
+        "format": "csv",
+        "resource_type": "file.upload",
+        "url_type": "upload",
+    },
+    {
+        "name": "Climate: Rainfall for Afghanistan",
+        "description": "Rainfall data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/climate/#rainfall) for more information  \nSource: [Test Provider](https://data.humdata.org/organization/test_provider)  \nLicense: mylicense",
         "p_coded": True,
         "format": "csv",
         "resource_type": "file.upload",

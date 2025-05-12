@@ -117,11 +117,11 @@ results_subcategory_datasets = {
         "groups": [{"name": "afg"}],
         "tags": [
             {
-                "name": "hxl",
+                "name": "climate-weather",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
             {
-                "name": "climate-weather",
+                "name": "hxl",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
         ],

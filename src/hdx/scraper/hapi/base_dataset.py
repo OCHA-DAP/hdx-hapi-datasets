@@ -118,11 +118,14 @@ class BaseDataset(ABC):
         filename: str,
         hxltags: Dict,
         rows: List[Dict],
+        p_coded: Optional[bool],
     ) -> bool:
         resourcedata = {
             "name": resource_name,
             "description": resource_description,
         }
+        if p_coded is not None:
+            resourcedata["p_coded"] = p_coded
         headers = list(hxltags.keys())
         success, results = self.dataset.generate_resource_from_iterable(
             headers,

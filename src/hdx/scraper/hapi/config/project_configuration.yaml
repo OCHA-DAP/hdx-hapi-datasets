@@ -18,6 +18,7 @@ subcategories:
       name: "Affected People: Internally-Displaced Persons"
       description: "IDPs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons) for more information"
       filename: "hdx_hapi_idps"
+      p_coded: True
     hxltags:
       location_code: "#country+code"
       has_hrp: "#meta+has_hrp"
@@ -96,6 +97,7 @@ subcategories:
       name: "Affected People: Humanitarian Needs"
       description: "Humanitarian needs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#humanitarian-needs) for more information"
       filename: "hdx_hapi_humanitarian_needs"
+      p_coded: True
     hxltags:
       location_code: "#country+code"
       has_hrp: "#meta+has_hrp"
@@ -125,6 +127,7 @@ subcategories:
       name: "Coordination & Context: Operational Presence"
       description: "Operational Presence data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#operational-presence) for more information"
       filename: "hdx_hapi_operational_presence"
+      p_coded: True
     hxltags:
       location_code: "#country+code"
       has_hrp: "#meta+has_hrp"
@@ -175,6 +178,7 @@ subcategories:
       name: "Coordination & Context: Conflict Events"
       description: "Conflict Event data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#conflict-events) for more information"
       filename: "hdx_hapi_conflict_event"
+      p_coded: True
     hxltags:
       location_code: "#country+code"
       has_hrp: "#meta+has_hrp"
@@ -225,6 +229,7 @@ subcategories:
       name: "Food Security, Nutrition & Poverty: Food Security"
       description: "Food Security data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-security) for more information"
       filename: "hdx_hapi_food_security"
+      p_coded: True
     hxltags:
       location_code: "#country+code"
       has_hrp: "#meta+has_hrp"
@@ -254,6 +259,7 @@ subcategories:
       name: "Food Security, Nutrition & Poverty: Food Prices & Market Monitor"
       description: "Food Prices & Market Monitor data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) for more information"
       filename: "hdx_hapi_food_price"
+      p_coded: True
     hxltags:
       location_code: "#country+code"
       has_hrp: "#meta+has_hrp"
@@ -290,6 +296,7 @@ subcategories:
       name: "Food Security, Nutrition & Poverty: Poverty Rate"
       description: "Poverty Rate data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#poverty-rate) for more information"
       filename: "hdx_hapi_poverty_rate"
+      p_coded: True
     hxltags:
       location_code: "#country+code"
       has_hrp: "#meta+has_hrp"
@@ -315,6 +322,7 @@ subcategories:
       name: "Geography & Infrastructure: Baseline Population"
       description: "Baseline Population data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/geography_and_infrastructure/#baseline-population) for more information"
       filename: "hdx_hapi_population"
+      p_coded: True
     hxltags:
       location_code: "#country+code"
       has_hrp: "#meta+has_hrp"
@@ -343,6 +351,7 @@ subcategories:
       name: "Climate: Rainfall"
       description: "Rainfall data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/climate/#rainfall) for more information"
       filename: "hdx_hapi_rainfall"
+      p_coded: True
     hxltags:
       location_code: "#country+code"
       has_hrp: "#meta+has_hrp"
@@ -375,6 +384,7 @@ subcategories:
       name: "Metadata: Data Availability"
       description: "Data Availability Data from HDX HAPI. Each row in this resource represents an administrative division for which data is available, by subcategory. Please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/metadata/#data-availability) for more information"
       filename: "hdx_hapi_data_availability"
+      p_coded: True
     hxltags:
       category: "#category"
       subcategory: "#subcategory"

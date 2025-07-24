@@ -46,7 +46,7 @@ jobs:
         PREPREFIX: ${{ vars.HDX_USER_AGENT_PREPREFIX }}
         USER_AGENT: ${{ vars.USER_AGENT }}
       run: |
-        python -m hdx.scraper.hapi --restore_url=https://github.com/OCHA-DAP/hapi-pipelines/raw/refs/heads/db-export/database/hapi_db.pg_restore -db "postgresql+psycopg://postgres:postgres@localhost:5432/hapirestore"
+        python -m hdx.scraper.hapi --restore_url=https://github.com/OCHA-DAP/hapi-pipelines/raw/refs/heads/db-export/database/hapi_db.pg_restore.xz -db "postgresql+psycopg://postgres:postgres@localhost:5432/hapirestore"
     - name: Send mail
       if: failure()
       uses: dawidd6/action-send-mail@v3

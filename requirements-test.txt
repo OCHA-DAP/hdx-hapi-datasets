@@ -87,7 +87,7 @@ hapi-schema==0.9.15
     # via
     #   -c requirements.txt
     #   hdx-hapi-datasets (pyproject.toml)
-hdx-python-api==6.4.5
+hdx-python-api==6.4.6
     # via
     #   -c requirements.txt
     #   hdx-hapi-datasets (pyproject.toml)

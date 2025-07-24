@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 class TestHDXHAPIDatasets:
     @pytest.fixture(scope="function")
     def input_database(self, input_dir):
-        return join(input_dir, "hapi_db.pg_restore.xz")
+        return join(input_dir, "hapi_db.pg_restore")
 
     @pytest.fixture(scope="function")
     def db_uri(self):

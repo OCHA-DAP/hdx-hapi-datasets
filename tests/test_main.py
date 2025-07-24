@@ -4,9 +4,6 @@ from os.path import join
 import pytest
 from hapi_schema.views import prepare_hapi_views
 
-from hdx.api.configuration import Configuration
-from hdx.api.locations import Locations
-from hdx.data.vocabulary import Vocabulary
 from hdx.database import Database
 from hdx.database.dburi import get_params_from_connection_uri
 from hdx.database.postgresql import PostgresError
@@ -14,8 +11,7 @@ from hdx.scraper.framework.utilities.reader import Read
 from hdx.scraper.hapi.datasets import Datasets
 from hdx.scraper.hapi.subcategory_reader import SubcategoryReader
 from hdx.utilities.compare import assert_files_same
-from hdx.utilities.path import script_dir_plus_file, temp_dir
-from hdx.utilities.useragent import UserAgent
+from hdx.utilities.path import temp_dir
 
 from .country_results import result_country_dataset, result_country_resources
 from .subcategory_results import (
@@ -28,65 +24,8 @@ logger = logging.getLogger(__name__)
 
 class TestHDXHAPIDatasets:
     @pytest.fixture(scope="function")
-    def configuration(self):
-        UserAgent.set_global("test")
-        Configuration._create(
-            hdx_read_only=True,
-            hdx_site="prod",
-            project_config_yaml=script_dir_plus_file(
-                join("config", "project_configuration.yaml"), SubcategoryReader
-            ),
-        )
-        Locations.set_validlocations(
-            [
-                {"name": "AFG", "title": "Afghanistan"},
-                {"name": "SDN", "title": "Sudan"},
-            ]
-        )
-        Vocabulary._approved_vocabulary = {
-            "tags": [
-                {"name": tag}
-                for tag in (
-                    "hxl",
-                    "funding",
-                    "baseline population",
-                    "operational presence",
-                    "who is doing what and where-3w-4w-5w",
-                    "humanitarian needs overview-hno",
-                    "people in need-pin",
-                    "economics",
-                    "markets",
-                    "food security",
-                    "conflict-violence",
-                    "displacement",
-                    "internally displaced persons-idp",
-                    "migration",
-                    "hazards and risk",
-                    "refugees",
-                    "returnees",
-                    "education",
-                    "health",
-                    "indicators",
-                    "poverty",
-                    "climate-weather",
-                )
-            ],
-            "id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            "name": "approved",
-        }
-        return Configuration.read()
-
-    @pytest.fixture(scope="class")
-    def fixtures_dir(self):
-        return join("tests", "fixtures")
-
-    @pytest.fixture(scope="class")
-    def input_dir(self, fixtures_dir):
-        return join(fixtures_dir, "input")
-
-    @pytest.fixture(scope="function")
     def input_database(self, input_dir):
-        return join(input_dir, "hapi_db.pg_restore")
+        return join(input_dir, "hapi_db.pg_restore.xz")
 
     @pytest.fixture(scope="function")
     def db_uri(self):

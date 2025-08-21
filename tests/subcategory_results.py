@@ -357,6 +357,10 @@ results_subcategory_datasets = {
             {
                 "name": "hxl",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+            },
+            {
+                "name": "indicators",
+                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             }
         ],
         "dataset_date": "[2024-10-15T00:00:00 TO 2024-10-16T23:59:59]",

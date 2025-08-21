@@ -379,7 +379,8 @@ subcategories:
     title: "HDX HAPI - Metadata: Data Availability"
     source_override: "[HDX HAPI](https://hapi.humdata.org/)"
     license_override: "[Creative Commons Attribution for Intergovernmental Organisations](http://creativecommons.org/licenses/by/3.0/igo/legalcode)"
-    tags: []
+    tags:
+      - "indicators"
     resource:
       name: "Metadata: Data Availability"
       description: "Data Availability Data from HDX HAPI. Each row in this resource represents an administrative division for which data is available, by subcategory. Please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/metadata/#data-availability) for more information"

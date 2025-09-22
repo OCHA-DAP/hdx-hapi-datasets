@@ -377,8 +377,6 @@ results_subcategory_resources = {
             "description": "IDPs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#internally-displaced-persons) for more information",
             "p_coded": True,
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "refugees": [
@@ -386,8 +384,6 @@ results_subcategory_resources = {
             "name": "Global Affected People: Refugees & Persons of Concern",
             "description": "Refugees and Persons of Concern data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#refugees-persons-of-concern) for more information",
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "returnees": [
@@ -395,8 +391,6 @@ results_subcategory_resources = {
             "name": "Global Affected People: Returnees",
             "description": "Returnees data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#returnees) for more information",
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "humanitarian_needs": [
@@ -405,8 +399,6 @@ results_subcategory_resources = {
             "description": "Humanitarian needs data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/affected_people/#humanitarian-needs) for more information",
             "p_coded": True,
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "rainfall": [
@@ -415,8 +407,6 @@ results_subcategory_resources = {
             "description": "Rainfall data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/climate/#rainfall) for more information",
             "p_coded": True,
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "operational_presence": [
@@ -425,8 +415,6 @@ results_subcategory_resources = {
             "description": "Operational Presence data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#operational-presence) for more information",
             "p_coded": True,
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "funding": [
@@ -434,8 +422,6 @@ results_subcategory_resources = {
             "name": "Global Coordination & Context: Funding",
             "description": "Funding data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#funding) for more information",
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "conflict_event": [
@@ -444,8 +430,6 @@ results_subcategory_resources = {
             "description": "Conflict Event data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#conflict-events) for more information",
             "p_coded": True,
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "national_risk": [
@@ -453,8 +437,6 @@ results_subcategory_resources = {
             "name": "Global Coordination & Context: National Risk",
             "description": "National Risk data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/coordination_and_context/#national-risk) for more information",
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "food_security": [
@@ -463,8 +445,6 @@ results_subcategory_resources = {
             "description": "Food Security data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-security) for more information",
             "p_coded": True,
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "food_price": [
@@ -473,8 +453,6 @@ results_subcategory_resources = {
             "description": "Food Prices & Market Monitor data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) for more information",
             "p_coded": True,
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "population": [
@@ -483,8 +461,6 @@ results_subcategory_resources = {
             "description": "Baseline Population data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/geography_and_infrastructure/#baseline-population) for more information",
             "p_coded": True,
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "poverty_rate": [
@@ -493,8 +469,6 @@ results_subcategory_resources = {
             "description": "Poverty Rate data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#poverty-rate) for more information",
             "p_coded": True,
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
     "data_availability": [
@@ -503,8 +477,6 @@ results_subcategory_resources = {
             "description": "Data Availability Data from HDX HAPI. Each row in this resource represents an administrative division for which data is available, by subcategory. Please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/metadata/#data-availability) for more information",
             "p_coded": True,
             "format": "csv",
-            "resource_type": "file.upload",
-            "url_type": "upload",
         }
     ],
 }

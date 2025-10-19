@@ -134,27 +134,27 @@ class SubcategoryReader:
                 for country_dataset in country_datasets:
                     country_dataset.add_source(subcategory, hdx_provider)
                     country_dataset.add_license(subcategory, license)
-            hxltags = subcategory_info["hxltags"]
+            headers = subcategory_info["headers"]
             row = {}
-            for header, hxltag in hxltags.items():
+            for header in headers:
                 value = result[headers_to_index[header]]
-                if hxltag == "#date+start":
+                if header == "reference_period_start":
                     subcategory_dataset.update_start_date(value)
                     for country_dataset in country_datasets:
                         country_dataset.update_start_date(value)
                     value = iso_string_from_datetime(value)
-                elif hxltag == "#date+end":
+                elif header == "reference_period_end":
                     subcategory_dataset.update_end_date(value)
                     for country_dataset in country_datasets:
                         country_dataset.update_end_date(value)
                     value = iso_string_from_datetime(value)
-                elif hxltag == "#date+updated":
+                elif header == "hapi_updated_date":
                     # data availability table only has an update date
                     subcategory_dataset.update_start_date(value)
                     subcategory_dataset.update_end_date(value)
                     value = iso_string_from_datetime(value)
-                elif hxltag[:4] == "#adm":
-                    attribute = hxltag[-4:]
+                elif header[:5] == "admin":
+                    attribute = header[-4:]
                     if attribute == "name":
                         value = value.replace("UNSPECIFIED", "")
                     elif attribute == "code" and "-XXX" in value:

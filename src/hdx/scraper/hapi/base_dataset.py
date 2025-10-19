@@ -24,7 +24,7 @@ class BaseDataset(ABC):
         self.folder = folder
         self.configuration = configuration
         self.dataset = self.create_dataset(title, name)
-        self.tags = {"hxl"}
+        self.tags = set()
         self.start_date = default_enddate
         self.end_date = default_date
         self.sources = {}
@@ -116,7 +116,7 @@ class BaseDataset(ABC):
         resource_name: str,
         resource_description: str,
         filename: str,
-        hxltags: Dict,
+        headers: List,
         rows: List[Dict],
         p_coded: Optional[bool],
     ) -> bool:
@@ -126,14 +126,12 @@ class BaseDataset(ABC):
         }
         if p_coded is not None:
             resourcedata["p_coded"] = p_coded
-        headers = list(hxltags.keys())
-        success, results = self.dataset.generate_resource_from_iterable(
-            headers,
-            rows,
-            hxltags,
+        success, results = self.dataset.generate_resource(
             self.folder,
             filename,
+            rows,
             resourcedata,
+            headers,
         )
         return success
 

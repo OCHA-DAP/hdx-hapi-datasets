@@ -20,8 +20,8 @@ class SubcategoryDataset(BaseDataset):
         name = configuration["dataset_name"].format(suffix=subcategory)
         super().__init__(folder, configuration, title, name)
         subnational = False
-        for hxltag in subcategory_config["hxltags"]:
-            if hxltag in (
+        for header in subcategory_config["headers"]:
+            if header in (
                 "provider_admin1_name",
                 "provider_admin2_name",
                 "admin1_code",
@@ -51,8 +51,8 @@ class SubcategoryDataset(BaseDataset):
         resource_description = resource_info["description"]
         filename = resource_info["filename"]
         filename = f"{filename}_global.csv"
-        hxltags = subcategory_info["hxltags"]
+        headers = subcategory_info["headers"]
         p_coded = resource_info.get("p_coded")
         return self._add_resource(
-            resource_name, resource_description, filename, hxltags, rows, p_coded
+            resource_name, resource_description, filename, headers, rows, p_coded
         )

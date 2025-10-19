@@ -1,5 +1,4 @@
 category,subcategory,location_code,admin1_code,admin1_name,admin2_code,admin2_name,admin_level,hapi_updated_date
-#category,#subcategory,#country+code,#adm1+code,#adm1+name,#adm2+code,#adm2+name,#adm+level,#date+updated
 coordination-context,conflict-event,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2,2024-10-15
 food,food-price,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2,2024-10-16
 food,food-security,AFG,AB01,AB01 adm1,AB0101,AB0101 adm2,2,2024-10-15

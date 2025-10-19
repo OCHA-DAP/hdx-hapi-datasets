@@ -13,10 +13,6 @@ results_subcategory_datasets = {
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
             {
-                "name": "hxl",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
-            {
                 "name": "internally displaced persons-idp",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
@@ -41,10 +37,6 @@ results_subcategory_datasets = {
         "groups": [{"name": "afg"}],
         "tags": [
             {
-                "name": "hxl",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
-            {
                 "name": "refugees",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
@@ -64,10 +56,6 @@ results_subcategory_datasets = {
         "subnational": "0",
         "groups": [{"name": "afg"}],
         "tags": [
-            {
-                "name": "hxl",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
             {
                 "name": "returnees",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
@@ -90,10 +78,6 @@ results_subcategory_datasets = {
         "tags": [
             {
                 "name": "humanitarian needs overview-hno",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
-            {
-                "name": "hxl",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
             {
@@ -120,10 +104,6 @@ results_subcategory_datasets = {
                 "name": "climate-weather",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
-            {
-                "name": "hxl",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
         ],
         "dataset_date": "[2025-01-01T00:00:00 TO 2025-01-10T23:59:59]",
         "dataset_source": "Test Provider",
@@ -140,10 +120,6 @@ results_subcategory_datasets = {
         "subnational": "1",
         "groups": [{"name": "afg"}],
         "tags": [
-            {
-                "name": "hxl",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
             {
                 "name": "operational presence",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
@@ -172,10 +148,6 @@ results_subcategory_datasets = {
                 "name": "funding",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
-            {
-                "name": "hxl",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider",
@@ -194,10 +166,6 @@ results_subcategory_datasets = {
         "tags": [
             {
                 "name": "conflict-violence",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
-            {
-                "name": "hxl",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
         ],
@@ -220,10 +188,6 @@ results_subcategory_datasets = {
                 "name": "hazards and risk",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
-            {
-                "name": "hxl",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
         ],
         "dataset_date": "[2024-01-01T00:00:00 TO 2024-12-31T23:59:59]",
         "dataset_source": "Test Provider",
@@ -242,10 +206,6 @@ results_subcategory_datasets = {
         "tags": [
             {
                 "name": "food security",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
-            {
-                "name": "hxl",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
         ],
@@ -273,10 +233,6 @@ results_subcategory_datasets = {
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
             {
-                "name": "hxl",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
-            {
                 "name": "markets",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
@@ -297,10 +253,6 @@ results_subcategory_datasets = {
         "tags": [
             {
                 "name": "baseline population",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
-            {
-                "name": "hxl",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
         ],
@@ -328,10 +280,6 @@ results_subcategory_datasets = {
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
             {
-                "name": "hxl",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
-            {
                 "name": "indicators",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
             },
@@ -354,10 +302,6 @@ results_subcategory_datasets = {
         "subnational": "1",
         "groups": [{"name": "afg"}, {"name": "sdn"}],
         "tags": [
-            {
-                "name": "hxl",
-                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            },
             {
                 "name": "indicators",
                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",

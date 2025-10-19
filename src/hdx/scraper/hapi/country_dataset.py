@@ -77,8 +77,8 @@ class CountryDataset(BaseDataset):
                     )
         filename = resource_info["filename"]
         filename = f"{filename}_{self.countryiso3.lower()}.csv"
-        hxltags = subcategory_info["hxltags"]
+        headers = subcategory_info["headers"]
         p_coded = resource_info.get("p_coded")
         return self._add_resource(
-            resource_name, resource_description, filename, hxltags, rows, p_coded
+            resource_name, resource_description, filename, headers, rows, p_coded
         )

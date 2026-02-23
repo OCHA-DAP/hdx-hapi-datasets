@@ -30,7 +30,6 @@ def configuration():
         "tags": [
             {"name": tag}
             for tag in (
-                "hxl",
                 "funding",
                 "baseline population",
                 "operational presence",

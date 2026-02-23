@@ -71,8 +71,9 @@ class SubcategoryReader:
         for countryiso3 in self.session.scalars(
             select(view.c.location_code).distinct()
         ).all():
-            country_info = Country.get_country_info_from_iso3(countryiso3)
-            if country_info["#indicator+incomelevel"].lower() == "high":
+            countryinfo = Country.get_country_info_from_iso3(countryiso3)
+            income_level = countryinfo["World Bank Income Level"] or ""
+            if income_level.lower() == "high":
                 continue
             countryiso3s.append(countryiso3)
         return sorted(countryiso3s)

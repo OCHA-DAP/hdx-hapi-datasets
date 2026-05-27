@@ -1,6 +1,5 @@
-from typing import List
-
 from hdx.api.configuration import Configuration
+
 from hdx.scraper.hapi.country_dataset import CountryDataset
 from hdx.scraper.hapi.subcategory_dataset import SubcategoryDataset
 
@@ -10,7 +9,7 @@ class Datasets:
         self,
         folder: str,
         configuration: Configuration,
-        countryiso3s: List[str],
+        countryiso3s: list[str],
     ):
         self.subcategory_datasets = {}
         for subcategory in configuration["subcategories"]:

@@ -8,18 +8,17 @@ build-backend = "hatchling.build"
 
 [project]
 name = "hdx-hapi-datasets"
-requires-python = ">=3.10"
+dynamic = ["version"]
+requires-python = ">=3.13"
 dependencies = [
   "hapi-schema>= 0.9.17",
   "hdx-python-api>= 6.6.5",
   "hdx-python-country>= 4.1.1",
-  "hdx-python-database[postgresql]>= 1.3.7",
-  "hdx-python-scraper>= 2.6.5",
+  "hdx-python-database[postgresql]>= 1.3.9",
+  "hdx-python-pipelineutils>= 0.0.3",
   "hdx-python-utilities>= 4.0.8",
-  "sqlalchemy"
+  "sqlalchemy",
 ]
-
-dynamic = ["version"]
 
 [project.readme]
 file = "README.md"
@@ -28,6 +27,101 @@ content-type = "text/markdown"
 [project.urls]
 Homepage = "https://github.com/OCHA-DAP/hdx-hapi-datasets"
 
-[project.optional-dependencies]
-test = ["pytest", "pytest-check", "pytest-cov", "pytest-mock"]
-dev = ["pre-commit"]
+[dependency-groups]
+dev = [
+  "pytest",
+  "pytest-check",
+  "pytest-cov",
+  "pytest-mock",
+  "pre-commit",
+  "ruff",
+]
+
+# ----------------------------------------------------------------------------
+# Hatchling (Build & Versioning)
+# ----------------------------------------------------------------------------
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.version.raw-options]
+local_scheme = "no-local-version"
+version_scheme = "python-simplified-semver"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/hdx/scraper/hapi/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hdx"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+# ----------------------------------------------------------------------------
+# Ruff (Linting & Formatting)
+# ----------------------------------------------------------------------------
+
+[tool.ruff]
+target-version = "py313"
+src = ["src"]
+exclude = ["_version.py"]
+
+[tool.ruff.lint]
+extend-select = [
+  "I",   # isort
+  "UP",  # pyupgrade
+]
+ignore = [
+    "E501", # Line too long
+]
+
+[tool.ruff.lint.isort]
+known-local-folder = ["hdx.scraper.hapi"]
+known-third-party = [
+    "hdx.api",
+    "hdx.location",
+    "hdx.data",
+    "hdx.database",
+    "hdx.facades",
+    "hdx.pipelineutils",
+    "hdx.utilities",
+]
+
+# ----------------------------------------------------------------------------
+# Pytest (Testing)
+# ----------------------------------------------------------------------------
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+log_cli = true
+addopts = """
+    --color=yes
+    --rootdir=.
+    --junitxml=test-results.xml
+    --cov
+    --no-cov-on-fail
+    --cov-report=lcov
+    --cov-report=term-missing
+"""
+
+# ----------------------------------------------------------------------------
+# Coverage (Reporting)
+# ----------------------------------------------------------------------------
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["*/_version.py"]
+
+[tool.coverage.report]
+exclude_also = [
+    "from ._version",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "@(abc\\.)?abstractmethod",
+]

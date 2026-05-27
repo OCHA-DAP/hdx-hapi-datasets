@@ -1,17 +1,15 @@
 import logging
 from enum import Enum
-from typing import Dict, List, Tuple
-
-from sqlalchemy import select
 
 from hdx.api.configuration import Configuration
 from hdx.database import Database
 from hdx.location.country import Country
-from hdx.scraper.framework.utilities.reader import Read
+from hdx.pipelineutils.reader import Read
 from hdx.utilities.dateparse import (
     iso_string_from_datetime,
 )
 from hdx.utilities.dictandlist import dict_of_lists_add
+from sqlalchemy import select
 
 from .base_dataset import BaseDataset
 from .datasets import Datasets
@@ -34,7 +32,7 @@ class SubcategoryReader:
         ) = self.get_mappings()
         self.countryiso3s = self.read_countries()
 
-    def get_mappings(self) -> Tuple[Dict, Dict]:
+    def get_mappings(self) -> tuple[dict, dict]:
         view = self.views["resource"]
         results = self.session.execute(
             select(
@@ -65,7 +63,7 @@ class SubcategoryReader:
             resource_hdx_id_to_license[hdx_id] = license
         return resource_hdx_id_to_hdx_provider, resource_hdx_id_to_license
 
-    def read_countries(self) -> List[str]:
+    def read_countries(self) -> list[str]:
         view = self.views["data_availability"]
         countryiso3s = []
         for countryiso3 in self.session.scalars(
@@ -81,9 +79,9 @@ class SubcategoryReader:
     @staticmethod
     def add_resource(
         subcategory: str,
-        subcategory_info: Dict,
+        subcategory_info: dict,
         dataset: BaseDataset,
-        rows: List[Dict],
+        rows: list[dict],
     ) -> bool:
         if len(rows) == 0:
             return False
@@ -91,7 +89,7 @@ class SubcategoryReader:
         dataset.add_tags(tags)
         return dataset.add_resource(subcategory, subcategory_info, rows)
 
-    def get_countries(self) -> List[str]:
+    def get_countries(self) -> list[str]:
         return self.countryiso3s
 
     def get_subcategory(

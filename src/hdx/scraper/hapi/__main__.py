@@ -13,7 +13,7 @@ from hdx.database.dburi import (
 )
 from hdx.database.postgresql import PostgresError
 from hdx.facades.keyword_arguments import facade
-from hdx.scraper.framework.utilities.reader import Read
+from hdx.pipelineutils.reader import Read
 from hdx.utilities.dictandlist import args_to_dict
 from hdx.utilities.path import (
     script_dir_plus_file,

@@ -6,7 +6,7 @@ from hapi_schema.views import prepare_hapi_views
 from hdx.database import Database
 from hdx.database.dburi import get_params_from_connection_uri
 from hdx.database.postgresql import PostgresError
-from hdx.scraper.framework.utilities.reader import Read
+from hdx.pipelineutils.reader import Read
 from hdx.utilities.compare import assert_files_same
 from hdx.utilities.path import temp_dir
 

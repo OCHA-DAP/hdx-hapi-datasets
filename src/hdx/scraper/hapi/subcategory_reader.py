@@ -4,7 +4,7 @@ from enum import Enum
 from hdx.api.configuration import Configuration
 from hdx.database import Database
 from hdx.location.country import Country
-from hdx.scraper.framework.utilities.reader import Read
+from hdx.pipelineutils.reader import Read
 from hdx.utilities.dateparse import (
     iso_string_from_datetime,
 )

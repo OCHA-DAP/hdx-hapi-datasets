@@ -1,8 +1,8 @@
 import logging
-from typing import Dict, List
 
 from hdx.api.configuration import Configuration
 from hdx.location.country import Country
+
 from hdx.scraper.hapi.base_dataset import BaseDataset
 
 logger = logging.getLogger(__name__)
@@ -25,8 +25,8 @@ class CountryDataset(BaseDataset):
     def add_resource(
         self,
         subcategory: str,
-        subcategory_info: Dict,
-        rows: List[Dict],
+        subcategory_info: dict,
+        rows: list[dict],
     ) -> bool:
         resource_info = subcategory_info["resource"]
         resource_name = resource_info["name"]

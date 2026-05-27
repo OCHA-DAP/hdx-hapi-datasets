@@ -4,10 +4,8 @@ import argparse
 import logging
 from os import getenv
 from os.path import expanduser, join
-from typing import Optional
 
 from hapi_schema.views import prepare_hapi_views
-
 from hdx.api.configuration import Configuration
 from hdx.database import Database
 from hdx.database.dburi import (
@@ -16,7 +14,6 @@ from hdx.database.dburi import (
 from hdx.database.postgresql import PostgresError
 from hdx.facades.keyword_arguments import facade
 from hdx.scraper.framework.utilities.reader import Read
-from hdx.scraper.hapi.datasets import Datasets
 from hdx.utilities.dictandlist import args_to_dict
 from hdx.utilities.path import (
     script_dir_plus_file,
@@ -25,6 +22,7 @@ from hdx.utilities.path import (
 
 from ._version import __version__
 from .subcategory_reader import SubcategoryReader
+from hdx.scraper.hapi.datasets import Datasets
 
 logger = logging.getLogger(__name__)
 
@@ -69,8 +67,8 @@ def parse_args():
 
 def main(
     restore_url: str,
-    db_uri: Optional[str] = None,
-    db_params: Optional[str] = None,
+    db_uri: str | None = None,
+    db_params: str | None = None,
     save: bool = False,
     use_saved: bool = False,
     **ignore,

@@ -1,14 +1,12 @@
 import logging
 from abc import ABC, abstractmethod
 from datetime import datetime
-from typing import Dict, List, Optional, Tuple
-
-from slugify import slugify
 
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
 from hdx.utilities.dateparse import default_date, default_enddate
 from hdx.utilities.dictandlist import dict_of_sets_add
+from slugify import slugify
 
 logger = logging.getLogger(__name__)
 
@@ -55,16 +53,16 @@ class BaseDataset(ABC):
         if date > self.end_date:
             self.end_date = date
 
-    def add_tags(self, tags: List[str]) -> None:
+    def add_tags(self, tags: list[str]) -> None:
         self.tags.update(tags)
 
-    def add_source(self, subcategory: str, source: Tuple[str, str]) -> None:
+    def add_source(self, subcategory: str, source: tuple[str, str]) -> None:
         dict_of_sets_add(self.sources, subcategory, source)
 
-    def add_license(self, subcategory: str, license: Tuple[str, str, str, str]) -> None:
+    def add_license(self, subcategory: str, license: tuple[str, str, str, str]) -> None:
         dict_of_sets_add(self.licenses, subcategory, license)
 
-    def get_dataset(self) -> Optional[Dataset]:
+    def get_dataset(self) -> Dataset | None:
         if len(self.dataset.get_resources()) == 0:
             return None
         self.dataset.add_tags(sorted(self.tags))
@@ -116,9 +114,9 @@ class BaseDataset(ABC):
         resource_name: str,
         resource_description: str,
         filename: str,
-        headers: List,
-        rows: List[Dict],
-        p_coded: Optional[bool],
+        headers: list,
+        rows: list[dict],
+        p_coded: bool | None,
     ) -> bool:
         resourcedata = {
             "name": resource_name,
@@ -139,7 +137,7 @@ class BaseDataset(ABC):
     def add_resource(
         self,
         subcategory: str,
-        subcategory_info: Dict,
-        rows: List[Dict],
+        subcategory_info: dict,
+        rows: list[dict],
     ) -> bool:
         pass

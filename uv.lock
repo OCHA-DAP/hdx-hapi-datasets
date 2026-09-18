@@ -392,14 +392,14 @@ wheels = [
 
 [[package]]
 name = "hapi-schema"
-version = "0.9.17"
+version = "0.9.18"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "sqlalchemy" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/fb/54/8945ea356107f4e6b4f9263df4071b22063743180fe5415db92013e08542/hapi_schema-0.9.17.tar.gz", hash = "sha256:ef2cb9dc446419dda42c70852a1d7cbd058d862aad845af577dd99a262f81f08", size = 40334, upload-time = "2025-10-21T21:56:07.951Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e9/57/13c602eedc76bdcde47ad53a9e8609e30cbe9d6c08a539834a12c0c13575/hapi_schema-0.9.18.tar.gz", hash = "sha256:d151a8e496632766462ca8ef873bebedc5250538b74f4e80d493474312f40736", size = 85783, upload-time = "2026-09-17T02:38:06.632Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/95/9b/a43928fa4522ffb12d6d6561512d7de88c272655be4962d097cae3936e1b/hapi_schema-0.9.17-py3-none-any.whl", hash = "sha256:d0349adbe40538caab46ed988648d71d3a6d3379392991daca33f4e9a6e6bca8", size = 41621, upload-time = "2025-10-21T21:56:06.66Z" },
+    { url = "https://files.pythonhosted.org/packages/44/bd/0807628415caf8f8b616913c1d0d87ad48896cc0e55c22e4751f2fb826f7/hapi_schema-0.9.18-py3-none-any.whl", hash = "sha256:2b54992b14f152d514a686ae86a45b29bbbd65b48c9b34dcc49785c85a48ef6a", size = 41601, upload-time = "2026-09-17T02:38:05.445Z" },
 ]
 
 [[package]]

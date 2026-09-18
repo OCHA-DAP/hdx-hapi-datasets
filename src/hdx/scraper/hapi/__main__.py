@@ -62,6 +62,13 @@ def parse_args():
         action="store_true",
         help="Use saved data",
     )
+    parser.add_argument(
+        "-dr",
+        "--dry-run",
+        default=False,
+        action="store_true",
+        help="Do not write anything to HDX",
+    )
     return parser.parse_args()
 
 
@@ -71,6 +78,7 @@ def main(
     db_params: str | None = None,
     save: bool = False,
     use_saved: bool = False,
+    dry_run: bool = False,
     **ignore,
 ) -> None:
     """Run HAPI. Either a database connection string (db_uri) or database
@@ -83,11 +91,16 @@ def main(
         db_params (Optional[str]): Database connection parameters. Defaults to None.
         save (bool): Whether to save state for testing. Defaults to False.
         use_saved (bool): Whether to use saved state for testing. Defaults to False.
+        dry_run (bool): Whether to skip writing to HDX. Defaults to False.
 
     Returns:
         None
     """
     logger.info(f"##### {lookup} version {__version__} ####")
+    if dry_run:
+        logger.info("Dry run: no datasets will be written to HDX")
+    else:
+        logger.info("Not a dry run: datasets will be written to HDX")
     configuration = Configuration.read()
     if db_params:
         params = args_to_dict(db_params)
@@ -145,11 +158,16 @@ def main(
                             main,
                         )
                     )
-                    dataset.create_in_hdx(
-                        remove_additional_resources=True,
-                        updated_by_script=updated_by_script,
-                        batch=batch,
-                    )
+                    if dry_run:
+                        logger.info(
+                            f"Dry run: not writing dataset {dataset['name']} to HDX"
+                        )
+                    else:
+                        dataset.create_in_hdx(
+                            remove_additional_resources=True,
+                            updated_by_script=updated_by_script,
+                            batch=batch,
+                        )
             for countryiso3 in countryiso3s:
                 logger.info(f"Making country dataset for country {countryiso3}")
                 country_dataset = datasets.get_country_dataset(countryiso3)
@@ -161,12 +179,17 @@ def main(
                             main,
                         )
                     )
-                    dataset.create_in_hdx(
-                        match_resource_order=True,
-                        remove_additional_resources=True,
-                        updated_by_script=updated_by_script,
-                        batch=batch,
-                    )
+                    if dry_run:
+                        logger.info(
+                            f"Dry run: not writing dataset {dataset['name']} to HDX"
+                        )
+                    else:
+                        dataset.create_in_hdx(
+                            match_resource_order=True,
+                            remove_additional_resources=True,
+                            updated_by_script=updated_by_script,
+                            batch=batch,
+                        )
         finally:
             database.cleanup()
     logger.info("HDX HAPI datasets completed!")
@@ -191,4 +214,5 @@ if __name__ == "__main__":
         db_params=args.db_params,
         save=args.save,
         use_saved=args.use_saved,
+        dry_run=args.dry_run,
     )
